@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'arjngjae9irenq3ig3uaj93wt$)%{+G_AT$T'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-creepersguit-ciproject4-qxm3xco73bo.ws.codeinstitute-ide.net','.herokuapp.com']
 
