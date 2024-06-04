@@ -20,6 +20,6 @@ from backgroundcode.views import test
 from backgroundcode.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', home, name='home'),
     path('backgroundcode/', test, name='testing'),
 ]
