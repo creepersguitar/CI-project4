@@ -11,6 +11,7 @@ class Booking(models.Model):
     User, on_delete=models.CASCADE, related_name="bookings"
     )
     content = models.TextField()
+    excerpt = models.TextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     
