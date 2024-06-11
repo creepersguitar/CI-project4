@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Booking
 #
 #
 #
-def test(request):
-    return HttpResponse("Hello, System!")
-def home(request):
-    return HttpResponse("Welcome to the Home Page")
+class booklist(generic.ListView):
+    model = Booking
