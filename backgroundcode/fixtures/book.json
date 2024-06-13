@@ -4,7 +4,7 @@
         "pk": null,
         "fields": {
             "title": "Booking-1",
-            "slug": "Booking 1",
+            "slug": "Booking1",
             "author": 1,
             "content": "<p>Hi, i would like to book a table for 10 at 6pm on the 28/12/2024</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -16,7 +16,7 @@
         "pk": null,
         "fields": {
             "title": "Unique Booking 2",
-            "slug": "Unique Booking 2",
+            "slug": "Unique-Booking-2",
             "author": 1,
             "content": "<p>Hi, I would like a booking for 2 people on the 25/12/2024</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -27,8 +27,8 @@
         "model": "backgroundcode.Booking",
         "pk": null,
         "fields": {
-            "title": "Booking 3",
-            "slug": "Booking 3",
+            "title": "Booking3",
+            "slug": "Booking-3",
             "author": 1,
             "content": "<p>I would like a table for 4 people. What availability do you have? Also one person is in a wheelchair</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -40,7 +40,7 @@
         "pk": null,
         "fields": {
             "title": "Unique Booking-4",
-            "slug": "Unique Booking-4",
+            "slug": "Unique_Booking-4",
             "author": 1,
             "content": "<p>I would like to book a table for a group of 6 do you have any time next tuesday?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -52,7 +52,7 @@
         "pk": null,
         "fields": {
             "title": "booking_5",
-            "slug": "booking_5",
+            "slug": "booking5",
             "author": 1,
             "content": "<p>Hi i would like to book a table for 3 but one has lots of allergies can you check if you this is possible that we can have a table?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -64,7 +64,7 @@
         "pk": null,
         "fields": {
             "title": "Booking_6",
-            "slug": "Booking_6",
+            "slug": "Booking-6",
             "author": 1,
             "content": "<p>I would like a table but a member of my group has a pureed diet is it possible for you to acommodate us?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -76,7 +76,7 @@
         "pk": null,
         "fields": {
             "title": "Booking7",
-            "slug": "Booking7",
+            "slug": "User_Booking7",
             "author": 1,
             "content": "<p>I would like a table for 6 but a member has a pureed diet and thickener for fluids. Is it possible that we get a table?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -88,7 +88,7 @@
         "pk": null,
         "fields": {
             "title": "booking8",
-            "slug": "booking8",
+            "slug": "user-booking8",
             "author": 1,
             "content": "<p>Hi can i have a table for one tonight at 6pm?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -100,7 +100,7 @@
         "pk": null,
         "fields": {
             "title": "Booking nine",
-            "slug": "Booking nine",
+            "slug": "Booking-nine",
             "author": 1,
             "content": "<p>Do you have availability on a sunday? And do you have a roast dinner option? if so can i book a table for 6 at 6pm?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -112,7 +112,7 @@
         "pk": null,
         "fields": {
             "title": "booking-10",
-            "slug": "booking-10",
+            "slug": "booking10",
             "author": 1,
             "content": "<p>I would like a table but i just want to know, do you have any meat free options?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -124,7 +124,7 @@
         "pk": null,
         "fields": {
             "title": "user-Booking 11",
-            "slug": "user-Booking 11",
+            "slug": "user-Booking_11",
             "author": 1,
             "content": "<p>Hi i would like to book a table for 3 but one has lots of allergies can you check if you this is possible that we can have a table?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -136,7 +136,7 @@
         "pk": null,
         "fields": {
             "title": "user-Booking12",
-            "slug": "user-Booking12",
+            "slug": "user-Booking-12",
             "author": 1,
             "content": "<p>I would like a table for 6 but a member has a pureed diet and thickener for fluids. Is it possible that we get a table?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -148,7 +148,7 @@
         "pk": null,
         "fields": {
             "title": "user-Booking_13",
-            "slug": "user-Booking_13",
+            "slug": "userBooking_13",
             "author": 1,
             "content": "<p>Hi can i have a table for one tonight at 6pm?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -160,7 +160,7 @@
         "pk": null,
         "fields": {
             "title": "user_Booking 14",
-            "slug": "user_Booking 14",
+            "slug": "user_Booking14",
             "author": 1,
             "content": "<p>Hi i would like to book a table for 3 but one has lots of allergies can you check if you this is possible that we can have a table?</p>",
             "created_on": "2024-06-13T00:00:00Z",
@@ -172,7 +172,7 @@
         "pk": null,
         "fields": {
             "title": "User_Booking_15",
-            "slug": "User_Booking_15",
+            "slug": "User_Booking15",
             "author": 1,
             "content": "<p>Hi can i have a table for one tonight at 6pm?</p>",
             "created_on": "2024-06-13T00:00:00Z",
