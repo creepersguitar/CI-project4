@@ -58,7 +58,7 @@ MIDDLEWARE = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'mainapp.urls'
-TEMPLATES_DIR = 'backgroundcode/templates'
+TEMPLATES_DIR = 'backgroundcode/templates/'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
