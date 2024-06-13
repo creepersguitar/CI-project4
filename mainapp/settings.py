@@ -26,7 +26,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'arjngjae9irenq3ig3uaj93wt$)%{+G_AT$T'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-creepersguit-ciproject4-qxm3xco73bo.ws.codeinstitute-ide.net','.herokuapp.com']
 
@@ -58,7 +58,7 @@ MIDDLEWARE = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'mainapp.urls'
-
+TEMPLATES_DIR = 'backgroundcode/templates'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -74,6 +74,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'mainapp.wsgi.application'
 
