@@ -26,9 +26,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'arjngjae9irenq3ig3uaj93wt$)%{+G_AT$T'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-creepersguit-ciproject4-qxm3xco73bo.ws.codeinstitute-ide.net','.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-creepersguit-ciproject4-qxm3xco73bo.ws.codeinstitute-ide.net',
+    'ci-project4-django-c7dcfccbb88c.herokuapp.com',
+    '.herokuapp.com',
+]
 
 
 # Application definition
@@ -58,11 +62,11 @@ MIDDLEWARE = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'mainapp.urls'
-TEMPLATES_DIR = 'backgroundcode/templates/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(TEMPLATES_DIR, 'backgroundcode', 'templates')],  # Adjust this path accordingly
+        'DIRS': [os.path.join(BASE_DIR, 'backgroundcode', 'templates')],  # Adjust this path accordingly
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -154,6 +158,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'backgroundcode', 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
