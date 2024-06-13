@@ -4,4 +4,5 @@ from .models import Booking
 
 class booklist(generic.ListView):
     queryset = Booking.objects.filter(status=1)
-    template_name = 'booking_list.html'
+    template_name = 'backgroundcode/index.html'
+    paginate_by = 6
