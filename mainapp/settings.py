@@ -62,7 +62,7 @@ TEMPLATES_DIR = 'backgroundcode/templates/'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [os.path.join(TEMPLATES_DIR, 'backgroundcode', 'templates')],  # Adjust this path accordingly
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,6 +74,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 
 WSGI_APPLICATION = 'mainapp.wsgi.application'
