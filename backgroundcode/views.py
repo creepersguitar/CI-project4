@@ -6,7 +6,7 @@ from .models import Booking
 logger = logging.getLogger(__name__)
 
 class booklist(generic.ListView):
-    template_name = 'backgroundcode/index.html'
+    template_name = 'index.html'
     paginate_by = 6
 
     def get_queryset(self):
