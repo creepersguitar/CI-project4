@@ -16,6 +16,7 @@ class booklist(generic.ListView):
             logger.debug("Attempting to fetch bookings with status=1")
             bookings = Booking.objects.filter(status=1)
             logger.debug(f"Found {bookings.count()} bookings")
+            print('bookings:', bookings)
             return bookings
         except Exception as e:
             logger.error("Error fetching bookings: %s", e)
