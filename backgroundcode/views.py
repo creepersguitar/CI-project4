@@ -1,3 +1,5 @@
+# backgroundcode/views.py
+
 import logging
 from django.shortcuts import render
 from django.views import generic
@@ -11,7 +13,10 @@ class booklist(generic.ListView):
 
     def get_queryset(self):
         try:
-            return Booking.objects.filter(status=1)
+            logger.debug("Attempting to fetch bookings with status=1")
+            bookings = Booking.objects.filter(status=1)
+            logger.debug(f"Found {bookings.count()} bookings")
+            return bookings
         except Exception as e:
             logger.error("Error fetching bookings: %s", e)
             return []
