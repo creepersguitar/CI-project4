@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var bookingButton = document.querySelector(".booking-button");
     var profileForm = document.getElementById("profile-form");
     var heroText = document.querySelector(".hero-text");
+    var profileCreatedModal = new bootstrap.Modal(document.getElementById('profileCreatedModal'));
 
     heroButton.addEventListener("click", function() {
         // Hide hero button and show profile form
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 heroText.textContent = "Start Your Booking Process";
                 profileForm.classList.add("d-none");
                 bookingButton.classList.remove("d-none");
+                profileCreatedModal.show(); // Show profile created modal
             }, 1000); // Simulate a delay for profile creation
         }
     });

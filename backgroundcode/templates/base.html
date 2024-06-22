@@ -57,9 +57,9 @@
         <div class="logo-box">
             <img src="{% static 'backgroundcode/images/restaurant-main.jpg' %}" alt="Empty restaurant" class="logo">
             <div class="hero-text-box">
-                <h1 class="hero-text">Bite | Bait</h1>
+                <h1 class="hero-text">Book your table now!</h1>
                 <!-- Main booking code can go here -->
-                <button class="hero-button btn btn-primary mt-3">make a profile</button>
+                <button class="hero-button btn btn-primary mt-3">Start Booking!</button>
                 <form id="profile-form" class="d-none">
                     <div class="mb-3">
                         <label for="inputName" class="form-label">Name</label>
@@ -75,9 +75,29 @@
                     </div>
                     <button type="submit" class="btn btn-primary mt-3">Create Profile</button>
                 </form>
+                <button class="booking-button btn btn-primary mt-3 d-none">Proceed to Booking</button>
             </div>
         </div>
     </main>
+
+    <!-- Profile Created Modal -->
+    <div class="modal fade" id="profileCreatedModal" tabindex="-1" aria-labelledby="profileCreatedModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileCreatedModalLabel">Profile Created</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Your profile has been successfully created.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
