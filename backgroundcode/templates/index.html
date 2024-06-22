@@ -4,12 +4,74 @@
 
 <!-- index.html content starts here -->
 <div class="container-fluid">
-    <div class="row">
+    <div class="row mt-3">
 
-        <!-- booking Entries Column -->
-        <div class="col-12 mt-3 left">
+        <!-- Left booking Entries Column -->
+        <div class="col-md-3">
             <div class="row">
                 {% for post in booking_list %}
+                {% if forloop.counter <= 2 %}
+                <div class="col-12 mb-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ post.author }}</p>
+                                </div>
+                            </div>
+                            <a href="#" class="post-link">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.excerpt }}</p>
+                            </a>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ post.created_on}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Middle Column with Logo Section (Already in base.html) -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center position-relative">
+            <!-- The main logo section is assumed to be in base.html -->
+        </div>
+
+        <!-- Right booking Entries Column -->
+        <div class="col-md-3">
+            <div class="row">
+                {% for post in booking_list %}
+                {% if forloop.counter > 2 and forloop.counter <= 4 %}
+                <div class="col-12 mb-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ post.author }}</p>
+                                </div>
+                            </div>
+                            <a href="#" class="post-link">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.excerpt }}</p>
+                            </a>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ post.created_on}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Remaining bookings Entries Column -->
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="row">
+                {% for post in booking_list %}
+                {% if forloop.counter > 4 %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -22,21 +84,21 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
-
                             <hr />
                             <p class="card-text text-muted h6">{{ post.created_on}}</p>
                         </div>
                     </div>
                 </div>
+                {% endif %}
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
+
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
