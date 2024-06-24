@@ -21,3 +21,13 @@ class booklist(generic.ListView):
         except Exception as e:
             logger.error("Error fetching bookings: %s", e)
             return []
+
+def bookings(request):
+    try:
+        all_bookings = Booking.objects.all()
+        logger.debug(f"Found {all_bookings.count()} bookings")
+    except Exception as e:
+        logger.error("Error fetching all bookings: %s", e)
+        all_bookings = []
+
+    return render(request, 'bookings.html', {'bookings': all_bookings})
