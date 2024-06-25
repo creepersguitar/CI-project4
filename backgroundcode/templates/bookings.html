@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load= static %}
+{% load static %}
 
 {% block content %}
 <!-- bookings.html content starts here -->
@@ -104,18 +104,15 @@
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
                 <li>
-                    <a href="?page={{ page_obj.previous_page_number }}"
-                    class="page-link">&laquo; PREV</a>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
                 </li>
             {% endif %}
             {% if page_obj.has_next %}
-            <!--Next button -->
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
     {% endif %}
 </div>
-
 <!-- bookings.html content ends here -->
 {% endblock %}
