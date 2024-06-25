@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Get references to elements in the DOM
     var heroButton = document.querySelector(".hero-button");
     var bookingButton = document.querySelector(".booking-button");
     var profileForm = document.getElementById("profile-form");
     var heroText = document.querySelector(".hero-text");
     var profileCreatedModal = new bootstrap.Modal(document.getElementById('profileCreatedModal'));
 
+    // Add event listener for the hero button click
     heroButton.addEventListener("click", function() {
         // Hide hero button and show profile form
         heroButton.classList.add("d-none");
         profileForm.classList.remove("d-none");
     });
 
+    // Add event listener for profile form submission
     profileForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission
 
@@ -19,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var email = document.getElementById("inputEmail").value.trim();
         var phone = document.getElementById("inputPhone").value.trim();
 
-        // Validate form
+        // Validate form fields
         if (!validateName(name)) {
             alert("Please enter a valid name without numbers.");
             return;
@@ -45,20 +48,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000); // Simulate a delay for profile creation
     });
 
+    // Add event listener for the booking button click
     bookingButton.addEventListener("click", function() {
         heroText.textContent = "Now you can proceed with your booking!";
     });
 
-    // Helper functions for validation
+    // Helper function to validate name
     function validateName(name) {
         return name && !/\d/.test(name);
     }
 
+    // Helper function to validate email
     function validateEmail(email) {
         var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     }
 
+    // Helper function to validate phone
     function validatePhone(phone) {
         var re = /^\d{10,15}$/; // Adjust the regex based on your phone number format
         return re.test(phone);
