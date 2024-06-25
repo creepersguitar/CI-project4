@@ -30,3 +30,13 @@ def bookings(request):
         all_bookings = []
 
     return render(request, 'bookings.html', {'bookings': all_bookings})
+# create bookings view function
+def create_booking(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('bookings')
+    else:
+        form = BookingForm()
+    return render(request, 'bookings/create_booking.html', {'form': form})

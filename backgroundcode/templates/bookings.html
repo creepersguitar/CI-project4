@@ -33,9 +33,38 @@
             </div>
         </div>
 
-        <!-- Middle Column with Logo Section (Already in base.html) -->
+        <!-- Middle Column with Bookings Form -->
         <div class="col-md-6 d-flex align-items-center justify-content-center position-relative">
-            <!-- The main logo section is assumed to be in base.html -->
+            <!-- Bookings Form -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Book a Reservation</h2>
+                    <form method="post" action="{% url 'bookings:create' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" class="form-control" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Time</label>
+                            <input type="time" class="form-control" id="time" name="time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" class="form-control" id="guests" name="guests" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Now</button>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <!-- Right booking Entries Column -->
