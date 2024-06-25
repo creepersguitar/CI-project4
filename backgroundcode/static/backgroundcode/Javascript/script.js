@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var heroButton = document.querySelector(".hero-button");
     var bookingButton = document.querySelector(".booking-button");
     var profileForm = document.getElementById("profile-form");
+    var bookingForm = document.getElementById("booking-form");
     var heroText = document.querySelector(".hero-text");
     var profileCreatedModal = new bootstrap.Modal(document.getElementById('profileCreatedModal'));
 
@@ -50,7 +51,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add event listener for the booking button click
     bookingButton.addEventListener("click", function() {
-        heroText.textContent = "Now you can proceed with your booking!";
+        // Hide booking button and show booking form
+        bookingButton.classList.add("d-none");
+        bookingForm.classList.remove("d-none");
+        heroText.textContent = "Please fill in your booking details!";
+    });
+
+    // Add event listener for booking form submission
+    bookingForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get booking form values
+        var bookingDate = document.getElementById("inputBookingDate").value.trim();
+        var bookingTime = document.getElementById("inputBookingTime").value.trim();
+        var numberOfGuests = document.getElementById("inputGuests").value.trim();
+
+        // Validate booking form fields
+        if (!bookingDate) {
+            alert("Please select a booking date.");
+            return;
+        }
+
+        if (!bookingTime) {
+            alert("Please select a booking time.");
+            return;
+        }
+
+        if (!numberOfGuests || isNaN(numberOfGuests) || numberOfGuests <= 0) {
+            alert("Please enter a valid number of guests.");
+            return;
+        }
+
+        // Simulate booking creation (replace this with actual logic)
+        setTimeout(function() {
+            // Update hero text and reset forms
+            heroText.textContent = "Your booking is confirmed!";
+            bookingForm.classList.add("d-none");
+            heroButton.classList.remove("d-none");
+            profileForm.reset();
+            bookingForm.reset();
+        }, 1000); // Simulate a delay for booking creation
     });
 
     // Modal event listener to reset the form and button states
