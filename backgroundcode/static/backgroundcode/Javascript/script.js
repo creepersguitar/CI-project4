@@ -53,6 +53,14 @@ document.addEventListener("DOMContentLoaded", function() {
         heroText.textContent = "Now you can proceed with your booking!";
     });
 
+    // Modal event listener to reset the form and button states
+    document.getElementById('profileCreatedModal').addEventListener('hidden.bs.modal', function () {
+        profileForm.reset();
+        heroButton.classList.remove('d-none');
+        bookingButton.classList.add('d-none');
+        heroText.textContent = "Welcome to bite bait!";
+    });
+
     // Helper function to validate name
     function validateName(name) {
         return name && !/\d/.test(name);
