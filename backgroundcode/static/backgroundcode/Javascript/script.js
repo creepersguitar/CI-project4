@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     bookingButton.addEventListener("click", function() {
-        heroText.textContent = "Now you can proceed with your booking!";
+        // Redirect to bookings.html
+        window.location.href = "bookings.html";
     });
 
     // Helper functions for validation
