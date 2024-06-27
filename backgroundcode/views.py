@@ -3,6 +3,7 @@
 import logging
 from django.shortcuts import render
 from django.views import generic
+from .forms import BookingForm
 from .models import Booking
 
 logger = logging.getLogger(__name__)
@@ -30,13 +31,18 @@ def bookings(request):
         all_bookings = []
 
     return render(request, 'bookings.html', {'bookings': all_bookings})
+
 # create bookings view function
 def create_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('bookings')
+            logger.info("Booking created successfully")
+            return redirect('bookings')  # Redirect to bookings list or another page after successful booking creation
+        else:
+            logger.error("Form data is invalid")
     else:
         form = BookingForm()
+
     return render(request, 'bookings/create_booking.html', {'form': form})
