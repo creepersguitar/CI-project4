@@ -1,27 +1,11 @@
-# backgroundcode/views.py
-
-import logging
-from django.shortcuts import render
-from django.views import generic
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BookingForm
-from .models import Booking
+from .models import Booking, CustomUser
+import logging
 
 logger = logging.getLogger(__name__)
 
-class booklist(generic.ListView):
-    template_name = 'index.html'
-    paginate_by = 6
-
-    def get_queryset(self):
-        try:
-            logger.debug("Attempting to fetch bookings with status=1")
-            bookings = Booking.objects.filter(status=1)
-            logger.debug(f"Found {bookings.count()} bookings")
-            return bookings
-        except Exception as e:
-            logger.error("Error fetching bookings: %s", e)
-            return []
-
+# View to display all bookings
 def bookings(request):
     try:
         all_bookings = Booking.objects.all()
@@ -32,17 +16,22 @@ def bookings(request):
 
     return render(request, 'bookings.html', {'bookings': all_bookings})
 
-# create bookings view function
+# View to create a new booking
 def create_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
             logger.info("Booking created successfully")
-            return redirect('bookings')  # Redirect to bookings list or another page after successful booking creation
+            return redirect('bookings')  # Redirect to bookings list after successful creation
         else:
             logger.error("Form data is invalid")
     else:
         form = BookingForm()
 
-    return render(request, 'bookings/create_booking.html', {'form': form})
+    return render(request, 'create_booking.html', {'form': form})
+
+# View to display details of a specific booking
+def booking_detail(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    return render(request, 'booking_detail.html', {'booking': booking})
