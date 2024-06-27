@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic import ListView
 from .forms import BookingForm
 from .models import Booking, CustomUser
 import logging
@@ -6,15 +7,21 @@ import logging
 logger = logging.getLogger(__name__)
 
 # View to display all bookings
-def bookings(request):
-    try:
-        all_bookings = Booking.objects.all()
-        logger.debug(f"Found {all_bookings.count()} bookings")
-    except Exception as e:
-        logger.error("Error fetching all bookings: %s", e)
-        all_bookings = []
+class BookListView(ListView):
+    model = Booking
+    template_name = 'index.html'
+    context_object_name = 'bookings'
+    paginate_by = 6
 
-    return render(request, 'bookings.html', {'bookings': all_bookings})
+    def get_queryset(self):
+        try:
+            logger.debug("Attempting to fetch bookings with status=1")
+            bookings = Booking.objects.filter(status=1)
+            logger.debug(f"Found {bookings.count()} bookings")
+            return bookings
+        except Exception as e:
+            logger.error("Error fetching bookings: %s", e)
+            return []
 
 # View to create a new booking
 def create_booking(request):
@@ -29,9 +36,8 @@ def create_booking(request):
     else:
         form = BookingForm()
 
-    return render(request, 'create_booking.html', {'form': form})
+    return render(request, 'bookings/create_booking.html', {'form': form})
 
-# View to display details of a specific booking
 def booking_detail(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
-    return render(request, 'booking_detail.html', {'booking': booking})
+    return render(request, 'bookings/booking_detail.html', {'booking': booking})
