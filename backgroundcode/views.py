@@ -36,7 +36,7 @@ def create_booking(request):
     else:
         form = BookingForm()
 
-    return render(request, 'bookings/create_booking.html', {'form': form})
+    return render(request, 'bookings.html', {'form': form})
 
 def booking_detail(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
