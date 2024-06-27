@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
+
 class CustomUser(models.Model):
     username = models.CharField(max_length=150, unique=True)
     first_name = models.CharField(max_length=30)
@@ -26,10 +27,12 @@ class Profile(models.Model):
     bio = models.TextField()
     location = models.CharField(max_length=100)
     website = models.URLField()
+
     class Meta:
         ordering = ["user"]
+
     def __str__(self):
-        return f"Comment {self.body} by {self.author}"
+        return f"Profile of {self.user.username}"
 
 class Booking(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -39,6 +42,13 @@ class Booking(models.Model):
     excerpt = models.TextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    
+    # New fields added
+    name = models.CharField(max_length=100)
+    time = models.TimeField()
+    guests = models.IntegerField()
+    date = models.DateField()
+    email = models.EmailField()
 
     class Meta:
         ordering = ["-created_on"]
