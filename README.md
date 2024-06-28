@@ -21,9 +21,18 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 ## Design
 ## Features
 ## Installation
+- This section details the basic views of how to install the different parts of the application such as django, gunicorn and the PostgresSQL database.
 ### Install Django
-### Install summernote
+### Install PostgresSQL Database
+**This is for current Code institute Students only!**
+- The Postgres database can be installed for Code Institute Students only by heading to this [link](https://dbs.ci-dbs.net/)
+- Then inputting the email you use to sign into the LMS (Dashboard) on Code Institute (CI)
+- Then you should recieve an email saying the database is created as well as the details for it
+- Finally you can add it to your project the same way as when ElephantSQL was working
 ### Install packages
+ - To install the required packages you open the terminal
+ - Then you type pip3 install <Name> (<name> is name of package)
+ - If you need a required version you can type in the version after the name of the package (Like 20.1.0 for gunicorn)
 ## Usage
 ## Code Structure
 ## UX
