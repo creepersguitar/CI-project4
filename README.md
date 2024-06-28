@@ -14,7 +14,7 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 7. [Testing](#testing)
 8. [Bugs](#bugs)
 9. [Deployment](#deployment)
-10. []
+10. [User Stories](#user-stories)
 11. [Sources and credits](#sources-and-credits)
 12. [Contributing](#contribute)
 13. [Contact](#contact)
@@ -44,7 +44,12 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 ### Unfixed Bugs
 ### Fixed Bugs
 ## Deployment
-##
+## User Stories
 ## Sources and Credits
+### Sources
+### Credits
 ## Contributing
 ## Contact
+ - If you have any suggestions or questions then feel free to reach out
+ [Github](https://www.github.com/creepersguitar)
+ [LinkedIn](https://www.linkedin.com/in/george-small-055151204)
