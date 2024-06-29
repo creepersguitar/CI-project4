@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Get references to elements in the DOM
     var bookingForm = document.getElementById("booking-form");
     var heroText = document.querySelector(".hero-text");
-
+    let booklink = document.getElementById("card");
+    booklink.innerHTML = "<a href=''></a>"
     // Add event listener for booking form submission
     bookingForm.addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission
