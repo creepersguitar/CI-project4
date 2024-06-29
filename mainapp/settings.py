@@ -1,30 +1,24 @@
 import os
 from pathlib import Path
-import environ
 import django_heroku
 import dj_database_url
+import environ
 
-# Define BASE_DIR before using it
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if os.path.isfile('env.py'):
+    import env
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initialize environment variables
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# BASE_DIR is already defined above
-
-# Define the path to your templates directory
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'backgroundcode', 'templates')
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('DJANGO_SECRET_KEY')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DJANGO_DEBUG', default=False)
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-creepersguit-ciproject4-qxm3xco73bo.ws.codeinstitute-ide.net',
@@ -62,7 +56,7 @@ ROOT_URLCONF = 'mainapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [os.path.join(BASE_DIR, 'backgroundcode', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,11 +72,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mainapp.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 DATABASES = {
-    'default': dj_database_url.parse(env('DATABASE_URL'))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 CSRF_TRUSTED_ORIGINS = [
@@ -108,9 +99,6 @@ LOGGING = {
     },
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -126,9 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -137,14 +122,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
