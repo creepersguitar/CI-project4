@@ -24,6 +24,13 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 ## Installation
 - This section details the basic views of how to install the different parts of the application such as django, gunicorn and the PostgresSQL database.
 ### Install Django
+- To install Django, you first have to open your IDE (this will be shown in gitpod)
+- Then you click on the [terminal](backgroundcode/static/backgroundcode/images/terminal.png)
+    - or you click on the 3 bars in the top left hand of the screen
+    - Then you click on terminal
+    - finally new terminal
+- Once you are in the terminal you type "pip3 install Djang~=4.2.1"
+- Click enter then you will have Django installed
 ### Install PostgresSQL Database
 **This is for current Code institute Students only!**
 - The Postgres database can be installed for Code Institute Students only by heading to this [link](https://dbs.ci-dbs.net/)
@@ -36,6 +43,21 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
  - If you need a required version you can type in the version after the name of the package (Like 20.1.0 for gunicorn)
 ## Usage
 ## Code Structure
+- This section details as to how the code is structured and how to get this structure.
+### Make structure
+- To make this Structure, you first have to install [Django](#installation)
+    - Then you type into the terminal "pip3 freeze local > requirements.txt"
+- After that you type into the terminal "django-admin startproject codestar ." (Replace codestar with the name of your project)
+- You then create the new app by typing into the terminal "python3 manage.py startapp blog"
+- Then under codestar (the project name) you open up settings.py
+    - Then you append 'blog', into the bottom of the installed apps list
+    - Afterwards in views.py you need to type in "from django.http import HttpResponse" then "def my_blog(request): return HttpResponse("Hello, Blog!")" This is used as a test to make sure the project works.
+    - In codestar/urls.py, you then have to type "from blog.views import my_blog"
+    - There should be a bit of the urls.py called urlpatterns, in there you append "path('blog/', my_blog, name='blog'),"
+- Then you can check the project runs by typing "python manage.py runserver"
+    - open the preview in a new tab then append /blog to the end of the url
+- If you have completed all of the above, then you should see "Hello, Blog!" on your screen.
+### How code is structured
 ## UX
 ## Testing
  This Section is all about the testing of Bite bait. From testing that they work on different browsers to manual and automated testing.
@@ -48,7 +70,9 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 ### Fixed Bugs
 ## Deployment
 ## User Stories
-
+This section is about making user stories and just in general talking about them.
+### Make user stories
+### Talk about user stories
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
 ## Sources and Credits
