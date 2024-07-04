@@ -72,6 +72,7 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 ## User Stories
 This section is about making user stories and just in general talking about them.
 ### Make user stories
+
 ### Talk about user stories
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
@@ -88,8 +89,16 @@ This section is to talk about the parts of bite bait i have built but not had ti
  - My mentor Spencer Barribal for always providing advice and improvements that i can add to Bite bait
  - One of my old college projects for being a reliable source of information and reminding me on how to do certain parts of the design (like the entity relationship diagrams) aswell as part of the development in python.
  - My fellow peers and friends for giving me the motivation to finish this project when i have suffered with imposter syndrome
- - The code institute Tutor team for helping me solve an issue with error 500.
+ - John from the code institute Tutor team for helping me solve an issue with error 500.
 ## Contributing
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+ - when i say feature i mean what you are calling your branch (step 2), and what you are commiting aswell as pushing (steps 4 and 5)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
 ## Contact
  - If you have any suggestions or questions then feel free to reach out
  [Github](https://www.github.com/creepersguitar)
