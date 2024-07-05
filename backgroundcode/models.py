@@ -29,7 +29,7 @@ class Profile(models.Model):
     website = models.URLField()
 
     class Meta:
-        ordering = ["user"]
+        ordering = ["name"]
 
     def __str__(self):
         return f"Profile of {self.user.username}"
