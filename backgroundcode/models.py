@@ -23,9 +23,9 @@ class CustomUser(models.Model):
         return self.email
     
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
-    bio = models.TextField()
-    location = models.CharField(max_length=100)
+    name = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
+    email = models.TextField()
+    phone = models.CharField(max_length=15)
     website = models.URLField()
 
     class Meta:
