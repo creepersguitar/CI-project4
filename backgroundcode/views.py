@@ -42,4 +42,5 @@ def create_booking(request):
 @login_required
 def booking_detail(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
+    heroLink = 'booking_detail'
     return render(request, 'booking_detail.html', {'booking': booking})

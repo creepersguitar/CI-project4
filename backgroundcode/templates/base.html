@@ -57,7 +57,19 @@
         <!-- Logo Section -->
         <div class="logo-box">
             <img src="{% static 'backgroundcode/images/restaurant-main.jpg' %}" alt="Empty restaurant" class="logo">
-            <div class="hero-text-box"></div>
+            <div class="hero-text-box">
+                <a href="{% url 'create_booking' %}">Create a Booking</a>
+                {% if form %}
+                <h1>Create a New Booking</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Create Booking</button>
+                </form>
+                {% else %}
+                <p>Welcome to Bite Bait! Please create a booking.</p>
+                {% endif %}
+            </div>
         </div>
     </main>
 
