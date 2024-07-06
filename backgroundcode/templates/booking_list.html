@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'backgroundcode/css/styles.css' %}">
+    <title>Booking List</title>
+</head>
+<body>
+    <main class="flex-shrink-0 main-bg d-flex align-items-center justify-content-center position-relative">
+        <div class="booking-list">
+            <h2>Bookings</h2>
+            <ul>
+                {% for booking in bookings %}
+                <li>
+                    <a href="{% url 'booking_detail' booking.id %}">
+                        {{ booking.date }} - {{ booking.time }} ({{ booking.guests }} guests)
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

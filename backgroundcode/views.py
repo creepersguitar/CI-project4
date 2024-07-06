@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView
+from django.contrib.auth.decorators import login_required
 from .forms import BookingForm
 from .models import Booking, CustomUser
 import logging
@@ -23,7 +24,7 @@ class BookListView(ListView):
             logger.error("Error fetching bookings: %s", e)
             return []
 
-# View to create a new booking
+@login_required
 def create_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
@@ -36,8 +37,9 @@ def create_booking(request):
     else:
         form = BookingForm()
 
-    return render(request, 'bookings.html', {'form': form})
+    return render(request, 'create_booking.html', {'form': form})
 
+@login_required
 def booking_detail(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
-    return render(request, 'bookings.html', {'booking': booking})
+    return render(request, 'booking_detail.html', {'booking': booking})
