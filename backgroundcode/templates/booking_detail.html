@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'backgroundcode/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'backgroundcode/static/backgroundcode/CSS/style.css' %}">
     <title>Booking Detail</title>
 </head>
 <body>
     <main class="flex-shrink-0 main-bg d-flex align-items-center justify-content-center position-relative">
         <div class="booking-detail">
-            <h2>Booking Detail</h2>
-            <p><strong>Date:</strong> {{ booking.date }}</p>
-            <p><strong>Time:</strong> {{ booking.time }}</p>
-            <p><strong>Guests:</strong> {{ booking.guests }}</p>
-            <p><strong>Booked by:</strong> {{ booking.user.username }}</p>
+            <h2 id="book-contents">Booking Detail</h2>
+            <p id="date"><strong>Date:</strong> {{ booking.date }}</p>
+            <p id="time"><strong>Time:</strong> {{ booking.time }}</p>
+            <p id="people"><strong>Guests:</strong> {{ booking.guests }}</p>
+            <p id="booked-by"><strong>Booked by:</strong> {{ booking.user.username }}</p>
         </div>
     </main>
 </body>
