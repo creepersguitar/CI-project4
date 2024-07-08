@@ -20,7 +20,22 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 13. [Contributing](#contribute)
 14. [Contact](#contact)
 ## Design
+Bite bait was designed as a booking system for a restaurant to streamline their booking process.
+### Wireframe Design
+The wireframe design was done via [wireframe.cc](https://wireframe.cc/)
+![Wireframe-view](backgroundcode/static/backgroundcode/images/readme-images/wireframe-main.png)
 ## Features
+This section talks about the future features and features i have not had a chance to implement.
+### Future features
+Some of the potential future features i would like to include:
+ - ability to cancel reservations
+ - ability to add extra information i.e. allergies, dietry requirements etc.
+ - ability to see the menu of bite bait
+### unadded features
+Some of the unadded features i have not had enough time to implement:
+- Styling for login
+- Styling for logout
+- Styling for signup
 ## Installation
 - This section details the basic views of how to install the different parts of the application such as django, gunicorn and the PostgresSQL database.
 ### Install Django
@@ -99,6 +114,8 @@ Contributions are welcome! If you would like to contribute to this project, plea
 4. Commit your changes (`git commit -m 'Add some feature'`).
 5. Push to the branch (`git push origin feature/YourFeature`).
 6. Open a pull request.
+7. Wait for pull request to be looked at by me.
+8. If its okay then ill approve it but if there is any potential improvements then ill comment on it.
 ## Contact
  - If you have any suggestions or questions then feel free to reach out
  [Github](https://www.github.com/creepersguitar)
