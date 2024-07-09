@@ -143,8 +143,46 @@ Bite bait wants to attract users to be able to book a reservation at their resta
 ## User Stories
 This section is about making user stories and just in general talking about them.
 ### Make user stories
-
+In order to make a user story we first must make a project board.
+ - Firstly, head over to GitHub and create a new repository. (name it something like django-blog)
+ - In your repository, click on the Projects tab and click Link a project, then select Create new project from the dropdown that appears.
+ -  Select the Board template and then rename the new board by clicking on the project name. Finally click Create. (Give it a sensible name)
+ - Click on Workflows in the options menu (...).
+ - Choose Item added to project and then click Edit.
+ - Click the issue, pull request dropdown and unselect pull request. This step defines the item added as an issue.
+ - Set the value of an item in the project to Status: Todo. Then click Save and turn on workflow.
+ - Exit the workflows menu.
+ - From the options menu (...), open Settings.
+ - This board is private by default. In Settings > Danger Zone, you can set visibility to Public.
+    (Note this must be public in order to submit project **For CI Students**)
+You can create a user story template if you have not before.
+- Return to the blog repo and click on Settings.
+- Create a user stories template just as we did in the Agile section of the course. Scroll to Features, and within Issues, click Set up templates.
+- Choose to add a Custom template.
+- Preview a custom issue template for edit.
+- Click the pen icon to edit.
+- Edit the custom template using the same boilerplate markdown we used previously.
+    Give it a descriptive template name and briefly explain the purpose in About.
+    (As a **role** I can **capability** so that **received benefit**
+    - Acceptance criteria 1
+    - Acceptance criteria 2
+    - Acceptance criteria 3)
+- Click Propose changes, then add a commit message and commit the changes.
+Now that we have a project board set up, we can make the user stories.
+ - Click on Issues then New issue.
+ -  Click on Get started to use your user story template.
+ - Use the user stories template and fill in the missing steps of the story.
+    (Title - "View paginated list of posts".
+    Content - "As a site user, I can view a paginated list of posts so that I can select which post I want to view."
+    AC1 - "Given more than one post in the database, these multiple posts are listed."
+    AC2 - "When a user opens the main page a list of posts is seen."
+    AC3 - "Then the user sees all post titles with pagination to choose what to read.")
+ -  On the right-hand side click on Projects, and then select your user stories project to add the story to.
+ - Click Submit new issue.
+ - Go to the Projects tab and click on the user stories Kanban board to see the user story in the Todo list.
+ - Finally you repeat for all of the user stories that are needed.
 ### Talk about user stories
+User stories are great to simplify and organise the tasks that are needed to be done for projects or different applications such as bite bait. They can however, take a chunk of project time away from development so in between future projects i would like to develop a script to help automate the creation of user stories in github projects.
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
 ## Sources and Credits
@@ -156,12 +194,14 @@ This section is to talk about the parts of bite bait i have built but not had ti
 - Youtube for when i had an error 500 and a heroku h10 error.
     - h10 error [video!](https://youtu.be/68iCwSmSIvA?si=1ZuDBlHXPwnbr9Au)
 - Unsplash for the main photo for [bite bait](https://unsplash.com/photos/brown-and-gray-concrete-store-nmpW_WwwVSc)
+- CI 5 project 'i think therefore i blog' section 'User stories in github projects' module to help me explain how to make a user story.
 ### Credits
  - My mentor Spencer Barribal for always providing advice and improvements that i can add to Bite bait
  - One of my old college projects for being a reliable source of information and reminding me on how to do certain parts of the design (like the entity relationship diagrams) aswell as part of the development in python.
  - My fellow peers and friends for giving me the motivation to finish this project when i have suffered with imposter syndrome
  - John from the code institute Tutor team for helping me solve an issue with error 500.
  - Other coworkers/ residents where i work at supporting me in getting this project done
+ - The Code Institute 'i think therefore i blog' module on the 5 project course to be able to get the structure of the application and the create user stories section of the readme file.
 ## Contributing
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:
  - when i say feature i mean what you are calling your branch (step 2), and what you are commiting aswell as pushing (steps 4 and 5)
