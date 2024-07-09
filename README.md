@@ -126,8 +126,10 @@ Here is a brief overview of each part
   - **tests.py**: A file to define tests for the application.
   - **views.py**: A file to define views for the application.
 - **requirements.txt**: A file listing the dependencies of the project.
-
 ## UX
+This section tells us what the goals for bite bait are.
+### Site Goals
+Bite bait wants to attract users to be able to book a reservation at their restaurant with the potential addition of a menu to be available aswell in due course.
 ## Testing
  This Section is all about the testing of Bite bait. From testing that they work on different browsers to manual and automated testing.
 ### Browser testing
