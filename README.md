@@ -63,6 +63,7 @@ Some of the unadded features i have not had enough time to implement:
 - Finally you can add it to your project the same way as when ElephantSQL was working
 ### Install packages
  - To install the required packages you open the terminal
+ ![terminal](backgroundcode/static/backgroundcode/images/terminal.png)
  - Then you type pip3 install <Name> (<name> is name of package)
  - If you need a required version you can type in the version after the name of the package (Like 20.1.0 for gunicorn)
 ## Usage
@@ -89,6 +90,43 @@ To make a booking,
     - open the preview in a new tab then append /blog to the end of the url
 - If you have completed all of the above, then you should see "Hello, Blog!" on your screen.
 ### How code is structured
+This list is an example of what the applications file structure should look like.
+CI-Project-name/
+    codestar/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+        asgi.py
+    blog/
+        migrations/
+            __init__.py
+        __init__.py
+        admin.py
+        apps.py
+        models.py
+        tests.py
+        views.py
+    requirements.txt
+    manage.py
+Here is a brief overview of each part
+- **manage.py**: A command-line utility that lets you interact with this Django project.
+- **codestar/**: The project directory containing the project settings and configuration files.
+  - **__init__.py**: An empty file that tells Python that this directory should be considered a package.
+  - **settings.py**: The settings/configuration for this Django project.
+  - **urls.py**: The URL declarations for this Django project; a "table of contents" of your Django-powered site.
+  - **wsgi.py**: An entry-point for WSGI-compatible web servers to serve your project.
+  - **asgi.py**: An entry-point for ASGI-compatible web servers to serve your project.
+- **blog/**: The application directory.
+  - **migrations/**: A directory that will store database migrations for this app.
+  - **__init__.py**: An empty file that tells Python that this directory should be considered a package.
+  - **admin.py**: A file to register models for the Django admin.
+  - **apps.py**: A file that contains the configuration for the app.
+  - **models.py**: A file to define the data models of the application.
+  - **tests.py**: A file to define tests for the application.
+  - **views.py**: A file to define views for the application.
+- **requirements.txt**: A file listing the dependencies of the project.
+
 ## UX
 ## Testing
  This Section is all about the testing of Bite bait. From testing that they work on different browsers to manual and automated testing.
