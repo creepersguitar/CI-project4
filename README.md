@@ -24,6 +24,8 @@ Bite bait was designed as a booking system for a restaurant to streamline their 
 ### Wireframe Design
 The wireframe design was done via [wireframe.cc](https://wireframe.cc/)
 ![Wireframe-view](backgroundcode/static/backgroundcode/images/readme-images/wireframe-main.png)
+### ERD Design
+The Entity Relationship Design was done via [dbdiagram.io](https://dbdiagram.io/home)
 ## Features
 This section talks about the future features and features i have not had a chance to implement.
 ### Future features
