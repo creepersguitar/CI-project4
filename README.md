@@ -26,6 +26,10 @@ The wireframe design was done via [wireframe.cc](https://wireframe.cc/)
 ![Wireframe-view](backgroundcode/static/backgroundcode/images/readme-images/wireframe-main.png)
 ### ERD Design
 The Entity Relationship Design was done via [dbdiagram.io](https://dbdiagram.io/home)
+The ERD [image](backgroundcode/static/backgroundcode/images/readme-images/ERD_overview.png)
+To explain the image.
+ - One user can have many bookings
+ - One user can have many profiles (if they forget their email, lost their email etc.)
 ## Features
 This section talks about the future features and features i have not had a chance to implement.
 ### Future features
