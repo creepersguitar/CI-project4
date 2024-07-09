@@ -185,6 +185,7 @@ Now that we have a project board set up, we can make the user stories.
 User stories are great to simplify and organise the tasks that are needed to be done for projects or different applications such as bite bait. They can however, take a chunk of project time away from development so in between future projects i would like to develop a script to help automate the creation of user stories in github projects.
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
+The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
 ## Sources and Credits
  This section is all about the help i got from links, people, my mentor as well as the links to what i used to help my project.
 ### Sources
