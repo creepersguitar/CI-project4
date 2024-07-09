@@ -28,14 +28,17 @@ The wireframe design was done via [wireframe.cc](https://wireframe.cc/)
 This section talks about the future features and features i have not had a chance to implement.
 ### Future features
 Some of the potential future features i would like to include:
- - ability to cancel reservations
- - ability to add extra information i.e. allergies, dietry requirements etc.
- - ability to see the menu of bite bait
+ - Ability to cancel reservations
+ - Ability to add extra information i.e. allergies, dietry requirements etc.
+ - Ability to see the menu of bite bait
+ - Ability to edit the booking (change amount of guests or time)
+ - Ability to delete their account
 ### unadded features
 Some of the unadded features i have not had enough time to implement:
 - Styling for login
 - Styling for logout
 - Styling for signup
+- Confirmation popup for when user made a booking
 ## Installation
 - This section details the basic views of how to install the different parts of the application such as django, gunicorn and the PostgresSQL database.
 ### Install Django
@@ -57,6 +60,13 @@ Some of the unadded features i have not had enough time to implement:
  - Then you type pip3 install <Name> (<name> is name of package)
  - If you need a required version you can type in the version after the name of the package (Like 20.1.0 for gunicorn)
 ## Usage
+To make a booking,
+1. Open the website
+2. if you have not already you should sign in or signup
+3. If you have already signed in you click on create booking
+4. You then enter your details,
+5. You then click submit
+6. You should see a popup to say "Booking made!"
 ## Code Structure
 - This section details as to how the code is structured and how to get this structure.
 ### Make structure
@@ -105,6 +115,7 @@ This section is to talk about the parts of bite bait i have built but not had ti
  - One of my old college projects for being a reliable source of information and reminding me on how to do certain parts of the design (like the entity relationship diagrams) aswell as part of the development in python.
  - My fellow peers and friends for giving me the motivation to finish this project when i have suffered with imposter syndrome
  - John from the code institute Tutor team for helping me solve an issue with error 500.
+ - Other coworkers/ residents where i work at supporting me in getting this project done
 ## Contributing
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:
  - when i say feature i mean what you are calling your branch (step 2), and what you are commiting aswell as pushing (steps 4 and 5)
@@ -115,7 +126,7 @@ Contributions are welcome! If you would like to contribute to this project, plea
 5. Push to the branch (`git push origin feature/YourFeature`).
 6. Open a pull request.
 7. Wait for pull request to be looked at by me.
-8. If its okay then ill approve it but if there is any potential improvements then ill comment on it.
+8. If its okay then i'll approve it but if there is any potential improvements then i'll comment on it.
 ## Contact
  - If you have any suggestions or questions then feel free to reach out
  [Github](https://www.github.com/creepersguitar)
