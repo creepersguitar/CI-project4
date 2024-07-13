@@ -128,6 +128,14 @@ Bite bait wants to attract users to be able to book a reservation at their resta
 ## Testing
  This Section is all about the testing of Bite bait. From testing that they work on different browsers to manual and automated testing.
 ### Browser testing
+Bite Bait has been extensively tested on various web browsers including edge, chrome, safari, firefox
+| Browser | Layout + Functionality |
+|---------|------------------------|
+| Chrome  | ✔                      |
+| Firefox | ✔                      |
+| Safari  | ✔                      |
+| Ecosia  | ✔                      |
+| Edge    | ✔                      |
 ### Manual Testing
 ### Automated Testing
 ## Bugs
