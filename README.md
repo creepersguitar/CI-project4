@@ -5,7 +5,7 @@ Welcome to bite bait. A website designed to act as a booking system for a restau
 View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 
 ## contents
-1. [Design](#design)
+1. [Unfinished parts](#unfinished-parts)
 2. [Features](#features)
 3. [Installation](#installation)
 4. [Usage](#usage)
@@ -15,21 +15,16 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 8. [Bugs](#bugs)
 9. [Deployment](#deployment)
 10. [User Stories](#user-stories)
-11. [Unfinished parts](#unfinished-parts)
+11. [Design](#design)
 12. [Sources and credits](#sources-and-credits)
 13. [Contributing](#contribute)
 14. [Contact](#contact)
-## Design
-Bite bait was designed as a booking system for a restaurant to streamline their booking process.
-### Wireframe Design
-The wireframe design was done via [wireframe.cc](https://wireframe.cc/)
-![Wireframe-view](backgroundcode/static/backgroundcode/images/readme-images/wireframe-main.png)
-### ERD Design
-The Entity Relationship Design was done via [dbdiagram.io](https://dbdiagram.io/home)
-![image](backgroundcode/static/backgroundcode/images/readme-images/ERD_overview.png)
-To explain the image.
- - One user can have many bookings
- - One user can have many profiles (if they forget their email, lost their email etc.)
+## unfinished parts
+This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
+The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
+all of the main forms are done but the booking form does not send data to the /admin site
+The Styling on the login, logout, booking pages are not done as i would not have enough time.
+I have a little bit of code done for the automated testing as seen in backgroundcode/test_forms.py but i don't have enough code done for the tests.py files
 ## Features
 This section talks about the future features and features i have not had a chance to implement.
 ### Future features
@@ -138,9 +133,22 @@ Bite bait wants to attract users to be able to book a reservation at their resta
 ## Bugs
  This section is all about the annoying bugs which i either did fix or i did not have enough time to fix.
 ### Unfixed Bugs
+There are no unfixed bugs that i have tried to look for. Majority of the inputs have error handling to catch human error or tests from other developers.
 ### Fixed Bugs
-
+ - At the very start of building this site for bite bait, i kept on encountering an error 500 as i was following along with the "i think therefore i blog" module on the Code Institute LMS which was caused by me forgetting to rename a part of one of the files to match up with bite bait.
+ - i also encountered an internal server error on heroku which i checked the heroku dashboard, it came up in heroku logs that i had a h10 error (app crashed!). I used this youtube link and it helped fix the h10 and internal server [error.](https://youtu.be/68iCwSmSIvA?si=o3vwrcSVMWwiU9Xl)
+ - Recently there was an error 403 when i appended /admin in my browser which was caused by not having the local host preview in the CSRF_TRUSTED_ORIGINS section of my settings.py file which is now fixed
 ## Deployment
+Bite Bait was deployed via Heroku following these steps:
+1. Create requirements.txt.
+2. Push to GitHub.
+3. Sign up/login to Heroku.
+4. Create a new app.
+5. Set up configuration variables.
+6. Connect GitHub repository.
+7. Choose deployment method (manual or automatic).
+8. Wait for Heroku to build the application.
+9. Open the app and enjoy!
 ## User Stories
 This section is about making user stories and just in general talking about them.
 ### Make user stories
@@ -184,9 +192,17 @@ Now that we have a project board set up, we can make the user stories.
  - Finally you repeat for all of the user stories that are needed.
 ### Talk about user stories
 User stories are great to simplify and organise the tasks that are needed to be done for projects or different applications such as bite bait. They can however, take a chunk of project time away from development so in between future projects i would like to develop a script to help automate the creation of user stories in github projects.
-## unfinished parts
-This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
-The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
+## Design
+Bite bait was designed as a booking system for a restaurant to streamline their booking process.
+### Wireframe Design
+The wireframe design was done via [wireframe.cc](https://wireframe.cc/)
+![Wireframe-view](backgroundcode/static/backgroundcode/images/readme-images/wireframe-main.png)
+### ERD Design
+The Entity Relationship Design was done via [dbdiagram.io](https://dbdiagram.io/home)
+![image](backgroundcode/static/backgroundcode/images/readme-images/ERD_overview.png)
+To explain the image.
+ - One user can have many bookings
+ - One user can have many profiles (if they forget their email, lost their email etc.)
 ## Sources and Credits
  This section is all about the help i got from links, people, my mentor as well as the links to what i used to help my project.
 ### Sources
