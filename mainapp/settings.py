@@ -1,4 +1,5 @@
 import os
+import sys
 from pathlib import Path
 import django_heroku
 import dj_database_url
@@ -84,10 +85,12 @@ WSGI_APPLICATION = 'mainapp.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
+if 'test' in sys.argv:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "https://8000-creepersguit-ciproject4-qxm3xco73bo.ws.codeinstitute-ide.net"
 ]
 
 LOGGING = {
