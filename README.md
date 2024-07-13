@@ -139,6 +139,7 @@ Bite bait wants to attract users to be able to book a reservation at their resta
  This section is all about the annoying bugs which i either did fix or i did not have enough time to fix.
 ### Unfixed Bugs
 ### Fixed Bugs
+
 ## Deployment
 ## User Stories
 This section is about making user stories and just in general talking about them.
