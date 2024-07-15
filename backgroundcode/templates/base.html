@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 <head>
-    <title>Bite Bait</title>
+    <title>{% block head_title %}Bite Bait{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -54,23 +54,9 @@
     </nav>
     <!-- Main section of code -->
     <main class="flex-shrink-0 main-bg d-flex align-items-center justify-content-center position-relative">
-        <!-- Logo Section -->
-        <div class="logo-box">
-            <img src="{% static 'backgroundcode/images/restaurant-main.jpg' %}" alt="Empty restaurant" class="logo">
-            <div class="hero-text-box">
-                <a href="{% url 'create_booking' %}">Create a Booking</a>
-                {% if form %}
-                <h1>Create a New Booking</h1>
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Create Booking</button>
-                </form>
-                {% else %}
-                <p>Welcome to Bite Bait! Please create a booking.</p>
-                {% endif %}
-            </div>
-        </div>
+        {% block main_content %}
+        <!-- Custom content goes here -->
+        {% endblock %}
     </main>
 
     <!-- Profile Created Modal -->
