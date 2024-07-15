@@ -19,6 +19,8 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 12. [Sources and credits](#sources-and-credits)
 13. [Contributing](#contribute)
 14. [Contact](#contact)
+## Please note
+Please note that as of 14/07/2024, there is a pretty big bug of the postgresSQL Database custom to Code Institute students has gone down causing the site to have an error 500 which is out of my control.
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
 The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
@@ -141,7 +143,7 @@ Bite Bait has been extensively tested on various web browsers including edge, ch
 ## Bugs
  This section is all about the annoying bugs which i either did fix or i did not have enough time to fix.
 ### Unfixed Bugs
-There are no unfixed bugs that i have tried to look for. Majority of the inputs have error handling to catch human error or tests from other developers.
+As of 14/07/2024, there is a pretty big bug of the postgresSQL Database custom to Code Institute students has gone down causing the site to have an error 500 which is out of my control.
 ### Fixed Bugs
  - At the very start of building this site for bite bait, i kept on encountering an error 500 as i was following along with the "i think therefore i blog" module on the Code Institute LMS which was caused by me forgetting to rename a part of one of the files to match up with bite bait.
  - i also encountered an internal server error on heroku which i checked the heroku dashboard, it came up in heroku logs that i had a h10 error (app crashed!). I used this youtube link and it helped fix the h10 and internal server [error.](https://youtu.be/68iCwSmSIvA?si=o3vwrcSVMWwiU9Xl)
