@@ -139,7 +139,10 @@ Bite Bait has been extensively tested on various web browsers including edge, ch
 | Ecosia  | ✔                      |
 | Edge    | ✔                      |
 ### Manual Testing
+- checked for login to work (Before 14/07/2024 CI database error)
+- Checked for site to load (Before 14/07/2024 CI database error)
 ### Automated Testing
+I have only started to code the automated tests on the 13/07/2024 but because of the CI Database error, i will not be able to test all of bite bait especially the settings.py file.
 ## Bugs
  This section is all about the annoying bugs which i either did fix or i did not have enough time to fix.
 ### Unfixed Bugs
