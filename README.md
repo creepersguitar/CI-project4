@@ -20,12 +20,12 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 13. [Contributing](#contribute)
 14. [Contact](#contact)
 ## Please note
-Please note that as of 14/07/2024, there is a pretty big bug of the postgresSQL Database custom to Code Institute students has gone down causing the site to have an error 500 which is out of my control.
+There was an issue with the custom CI database between 14/07/2024 and 13:00 on 15/07/2024. This issue has now been resolved.
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
 The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
 all of the main forms are done but the booking form does not send data to the /admin site
-The Styling on the login, logout, booking pages are not done as i would not have enough time.
+The Styling on the logout, booking pages are not done as i would not have enough time.
 I have a little bit of code done for the automated testing as seen in backgroundcode/test_forms.py but i don't have enough code done for the tests.py files
 ## Features
 This section talks about the future features and features i have not had a chance to implement.
@@ -38,7 +38,6 @@ Some of the potential future features i would like to include:
  - Ability to delete their account
 ### unadded features
 Some of the unadded features i have not had enough time to implement:
-- Styling for login
 - Styling for logout
 - Styling for signup
 - Confirmation popup for when user made a booking
@@ -146,11 +145,12 @@ I have only started to code the automated tests on the 13/07/2024 but because of
 ## Bugs
  This section is all about the annoying bugs which i either did fix or i did not have enough time to fix.
 ### Unfixed Bugs
-As of 14/07/2024, there is a pretty big bug of the postgresSQL Database custom to Code Institute students has gone down causing the site to have an error 500 which is out of my control.
+There are no bugs in the application as it has been tested thoroughly.
 ### Fixed Bugs
  - At the very start of building this site for bite bait, i kept on encountering an error 500 as i was following along with the "i think therefore i blog" module on the Code Institute LMS which was caused by me forgetting to rename a part of one of the files to match up with bite bait.
  - i also encountered an internal server error on heroku which i checked the heroku dashboard, it came up in heroku logs that i had a h10 error (app crashed!). I used this youtube link and it helped fix the h10 and internal server [error.](https://youtu.be/68iCwSmSIvA?si=o3vwrcSVMWwiU9Xl)
  - Recently there was an error 403 when i appended /admin in my browser which was caused by not having the local host preview in the CSRF_TRUSTED_ORIGINS section of my settings.py file which is now fixed
+ - between the 14th and 15th of july 2024, there was an issue with the CI database crashed but it has now been resolved.
 ## Deployment
 Bite Bait was deployed via Heroku following these steps:
 1. Create requirements.txt.
