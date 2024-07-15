@@ -55,7 +55,12 @@
     <!-- Main section of code -->
     <main class="flex-shrink-0 main-bg d-flex align-items-center justify-content-center position-relative">
         {% block main_content %}
-        <!-- Default content if no block content is provided -->
+        <div class="logo-box">
+            <img src="{% static 'backgroundcode/images/restaurant-main.jpg' %}" alt="Empty restaurant" class="logo">
+            <div class="hero-text-box">
+                <button><a href="{% url 'create_booking' %}">Create a booking now!</a></button>
+            </div>
+        </div>
         {% endblock %}
     </main>
 
