@@ -1,3 +1,5 @@
+const popup = document.getElementById('successPopup');
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('bookingForm');
     form.addEventListener('submit', function(event) {
@@ -10,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showPopup() {
         // Show the popup
-        const popup = document.getElementById('successPopup');
         popup.style.display = 'block';
 
         // Optional: Close the popup after a few seconds (e.g., 3 seconds)
