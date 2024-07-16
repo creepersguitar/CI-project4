@@ -23,6 +23,7 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 There is a personal CI Database issue with connecting my application to the CI database issue which started again on the 16/07/2024 and there was not enough time to debug and fix the issue (This Was out of my control!) So i want you to bare this in mind when you assess this project.
 
 In both my env.py and heroku config vars, the DATABASE_URL are both the same (but for safety reasons i won't share this on this readme file!).
+Also, I know that sqlite3 won't work for submission so i can't switch to that to submit this application
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
 The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
