@@ -36,12 +36,8 @@ class Profile(models.Model):
 
 class Booking(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
     content = models.TextField()
-    excerpt = models.TextField(blank=True, null=True)
-    created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    
+    created_on = models.DateTimeField(auto_now_add=True)    
     # New fields added
     name = models.CharField(max_length=100, default='default_name')
     time = models.TimeField(default=time(12,0))
