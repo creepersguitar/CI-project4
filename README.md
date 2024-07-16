@@ -29,7 +29,7 @@ This section is to talk about the parts of bite bait i have built but not had ti
 The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
 all of the main forms are done but the signup form does not send data to the /admin site
 The Styling on the logout, page is not done as i would not have enough time. (booking styles is part done)
-I have a little bit of code done for the automated testing as seen in backgroundcode/test_forms.py but i don't have enough code done for the tests.py files
+I have a little bit of code done for the automated testing as seen in backgroundcode/test_forms.py but i don't have enough code done for the tests.py files and also because the CI database was being faulty.
 ## Features
 This section talks about the future features and features i have not had a chance to implement.
 ### Future features
@@ -148,7 +148,7 @@ I have only started to code the automated tests on the 13/07/2024 but because of
 ## Bugs
  This section is all about the annoying bugs which i either did fix or i did not have enough time to fix.
 ### Unfixed Bugs
-There are no bugs in the application as it has been tested thoroughly.
+The only bug currently as of 16/7/24 is the database is not connection for this application but it is for other students.
 ### Fixed Bugs
  - At the very start of building this site for bite bait, i kept on encountering an error 500 as i was following along with the "i think therefore i blog" module on the Code Institute LMS which was caused by me forgetting to rename a part of one of the files to match up with bite bait.
  - i also encountered an internal server error on heroku which i checked the heroku dashboard, it came up in heroku logs that i had a h10 error (app crashed!). I used this youtube link and it helped fix the h10 and internal server [error.](https://youtu.be/68iCwSmSIvA?si=o3vwrcSVMWwiU9Xl)
