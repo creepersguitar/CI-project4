@@ -35,8 +35,6 @@ class Profile(models.Model):
         return f"Profile of {self.user.username}"
 
 class Booking(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)    
     # New fields added
     name = models.CharField(max_length=100, default='default_name')
@@ -49,4 +47,4 @@ class Booking(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"Booking: {self.title} by {self.name}"
+        return f"Booking: {self.created_on} by {self.name}"
