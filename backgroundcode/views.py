@@ -29,14 +29,12 @@ def create_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            form.save()
-            logger.info("Booking created successfully")
-            return redirect('bookings')  # Redirect to bookings list after successful creation
-        else:
-            logger.error("Form data is invalid")
+            booking = form.save(commit=False)
+            booking.author = request.user  # Set the author to the current user
+            booking.save()
+            return redirect('booking_list')  # Redirect to a success page or the booking list
     else:
         form = BookingForm()
-
     return render(request, 'create_booking.html', {'form': form})
 
 @login_required

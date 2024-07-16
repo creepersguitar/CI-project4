@@ -5,7 +5,7 @@ from .models import Booking, Profile
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['name', 'email', 'date', 'time', 'guests']
+        fields = ['title', 'slug', 'content', 'excerpt', 'status', 'name', 'time', 'guests', 'date', 'email']
 
 class ProfileForm(forms.ModelForm):
     class Meta:
