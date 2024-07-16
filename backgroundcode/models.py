@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import date, time
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -44,11 +45,11 @@ class Booking(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     
     # New fields added
-    name = models.CharField(max_length=100)
-    time = models.TimeField()
-    guests = models.IntegerField()
-    date = models.DateField()
-    email = models.EmailField()
+    name = models.CharField(max_length=100, default='default_name')
+    time = models.TimeField(default=datetime.time(12,0))
+    guests = models.IntegerField(default=1)
+    date = models.DateField(default=datetime.date.today)
+    email = models.EmailField(default='example@example.com')
 
     class Meta:
         ordering = ["-created_on"]
