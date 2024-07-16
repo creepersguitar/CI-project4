@@ -37,7 +37,6 @@ class Profile(models.Model):
 class Booking(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="bookings")
     content = models.TextField()
     excerpt = models.TextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -54,4 +53,4 @@ class Booking(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"Booking: {self.title} by {self.author}"
+        return f"Booking: {self.title} by {self.name}"
