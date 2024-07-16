@@ -9,6 +9,7 @@
 <body>
     <div class="container mt-5">
         <h1>Create a New Booking</h1>
+        <h3>When you input date, it needs to be "yyyy-mm-dd"</h3>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
