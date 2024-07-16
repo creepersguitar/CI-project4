@@ -24,8 +24,8 @@ There was an issue with the custom CI database between 14/07/2024 and 13:00 on 1
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
 The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
-all of the main forms are done but the booking form does not send data to the /admin site
-The Styling on the logout, booking pages are not done as i would not have enough time.
+all of the main forms are done but the signup form does not send data to the /admin site
+The Styling on the logout, page is not done as i would not have enough time. (booking styles is part done)
 I have a little bit of code done for the automated testing as seen in backgroundcode/test_forms.py but i don't have enough code done for the tests.py files
 ## Features
 This section talks about the future features and features i have not had a chance to implement.
