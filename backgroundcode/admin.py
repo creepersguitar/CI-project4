@@ -3,12 +3,11 @@ from .models import Booking, Profile, CustomUser
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Booking)
-class PostAdmin(SummernoteModelAdmin):
+class BookingAdmin(SummernoteModelAdmin):
 
-    list_display = ('title', 'slug', 'status', 'created_on')
-    search_fields = ['title', 'content']
-    list_filter = ('status','created_on',)
-    prepopulated_fields = {'slug': ('title',)}
+    list_display = ('name', 'date', 'time', 'guests', 'email', 'created_on')
+    search_fields = ('name', 'email')
+    #list_filter = ('created_on')
     summernote_fields = ('content',)
 
 admin.site.register(Profile)
