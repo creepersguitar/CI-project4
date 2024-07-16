@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import date, time
+from datetime import date, time, datetime
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -25,9 +25,8 @@ class CustomUser(models.Model):
     
 class Profile(models.Model):
     name = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
-    email = models.TextField()
-    phone = models.CharField(max_length=15)
-    website = models.URLField()
+    email = models.TextField(default='example@example.com')
+    phone = models.CharField(max_length=15, default=274560901928406)
 
     class Meta:
         ordering = ["name"]
@@ -46,9 +45,9 @@ class Booking(models.Model):
     
     # New fields added
     name = models.CharField(max_length=100, default='default_name')
-    time = models.TimeField(default=datetime.time(12,0))
+    time = models.TimeField(default=time(12,0))
     guests = models.IntegerField(default=1)
-    date = models.DateField(default=datetime.date.today)
+    date = models.DateField(default=date.today)
     email = models.EmailField(default='example@example.com')
 
     class Meta:
