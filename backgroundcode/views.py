@@ -21,28 +21,26 @@ class BookListView(ListView):
             return []
 
 
-    @login_required
-    def create_booking(request):
-        if request.method == 'POST':
-            form = BookingForm(request.POST)
-            if form.is_valid():
-                booking = form.save(commit=False)
-                booking.author = request.user  # Set the author to the current user
-                booking.save()
+@login_required
+def create_booking(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.author = request.user  # Set the author to the current user
+            booking.save()
+            # Assuming you want to return a JSON response indicating success
+            return JsonResponse({'success': True})
 
-                # Assuming you want to return a JSON response indicating success
-                return JsonResponse({'success': True})
+        # Handle form errors if not valid
+        errors = form.errors.as_json()
+        return JsonResponse({'success': False, 'errors': errors})
+    else:
+        form = BookingForm()
+    return render(request, 'create_booking.html', {'form': form})
 
-            # Handle form errors if not valid
-            errors = form.errors.as_json()
-            return JsonResponse({'success': False, 'errors': errors})
-
-        else:
-            form = BookingForm()
-        return render(request, 'create_booking.html', {'form': form})
-
-    @login_required
-    def booking_detail(request, booking_id):
-        booking = get_object_or_404(Booking, id=booking_id)
-        heroLink = 'booking_detail'
-        return render(request, 'booking_detail.html', {'booking': booking})
+@login_required
+def booking_detail(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    heroLink = 'booking_detail'
+    return render(request, 'booking_detail.html', {'booking': booking})
