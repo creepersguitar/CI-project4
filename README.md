@@ -142,7 +142,11 @@ Bite Bait has been extensively tested on various web browsers including edge, ch
 - checked for login to work (Before 14/07/2024 CI database error)
 - Checked for site to load (Before 14/07/2024 CI database error)
 ### Automated Testing
-I have only started to code the automated tests on the 13/07/2024 but because of the CI Database error, i will not be able to test all of bite bait especially the settings.py file.
+The test cases are all based from the 'I think therefore i blog' module on the CI LMS (learning management system)
+The 3 tests that are ran came back with originally 2 errors... then it went to 3 then back to 2 but currently as of 17:35 on 17/07/2024, it is down to 1 error.
+[Test image 1](./CI-project4/backgroundcode/static/backgroundcode/images/readme-images/test1.png)
+[Test image 2](./backgroundcode/static/backgroundcode/images/readme-images/test2.png)
+[Test Image 3](./backgroundcode/static/backgroundcode/images/readme-images/test3.png)
 ## Bugs
  This section is all about the annoying bugs which i either did fix or i did not have enough time to fix.
 ### Unfixed Bugs
