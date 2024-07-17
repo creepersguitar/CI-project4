@@ -1,29 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Logout functionality
-    const logoutButton = document.getElementById('logoutButton');
-    const confirmLogoutButton = document.getElementById('confirmLogoutButton');
-    const logoutForm = document.getElementById('logoutForm');
-    const logoutModal = $('#logoutModal');
+    const form = document.getElementById('bookingForm');
 
-    logoutButton.addEventListener('click', function() {
-        // Show the modal
-        logoutModal.modal('show');
-    });
-
-    confirmLogoutButton.addEventListener('click', function() {
-        // Submit the form when the user confirms the logout
-        logoutForm.submit();
-    });
-
-    // Booking form submission with success popup
-    const bookingForm = document.getElementById('bookingForm');
-
-    bookingForm.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting normally
 
-        // Here you can add your validation logic if needed
-        // For demonstration purposes, we'll show the popup immediately
-        showPopup();
+        // Optional: Add validation logic if needed
+
+        // Submit the form data via fetch or XMLHttpRequest
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest', // Ensure this header is set for Django CSRF protection
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showPopup();
+            } else {
+                console.error('Booking was not successful.');
+                // Optionally handle error cases or show error messages
+            }
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+            // Handle any fetch errors or server errors
+        });
     });
 
     function showPopup() {
