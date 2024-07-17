@@ -4,6 +4,11 @@ from django.views.generic import ListView
 from .forms import BookingForm
 from .models import Booking
 from django.http import JsonResponse
+import logging
+
+logger = logging.getLogger(__name__)
+
+
 class BookListView(ListView):
     model = Booking
     template_name = 'index.html'
