@@ -1,7 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('bookingForm');
+    // Logout functionality
+    const logoutButton = document.getElementById('logoutButton');
+    const confirmLogoutButton = document.getElementById('confirmLogoutButton');
+    const logoutForm = document.getElementById('logoutForm');
+    const logoutModal = $('#logoutModal');
 
-    form.addEventListener('submit', function(event) {
+    logoutButton.addEventListener('click', function() {
+        // Show the modal
+        logoutModal.modal('show');
+    });
+
+    confirmLogoutButton.addEventListener('click', function() {
+        // Submit the form when the user confirms the logout
+        logoutForm.submit();
+    });
+
+    // Booking form submission with success popup
+    const bookingForm = document.getElementById('bookingForm');
+
+    bookingForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting normally
 
         // Here you can add your validation logic if needed
