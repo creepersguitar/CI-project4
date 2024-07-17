@@ -11,3 +11,6 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['name', 'email', 'phone']
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)

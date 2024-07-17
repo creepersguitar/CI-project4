@@ -20,16 +20,14 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 13. [Contributing](#contribute)
 14. [Contact](#contact)
 ## Please note
-There is a personal CI Database issue with connecting my application to the CI database issue which started again on the 16/07/2024 and there was not enough time to debug and fix the issue (This Was out of my control!) So i want you to bare this in mind when you assess this project.
-
-In both my env.py and heroku config vars, the DATABASE_URL are both the same (but for safety reasons i won't share this on this readme file!).
-Also, I know that sqlite3 won't work for submission so i can't switch to that to submit this application
+There was a personal CI Database issue with connecting my application to the CI database issue which started again on the 16/07/2024 and there was not enough time to debug and fix the issue (This Was out of my control!) So i want you to bare this in mind when you assess this project incase it goes again while you are assessing it :D
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
 The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
 all of the main forms are done but the signup form does not send data to the /admin site
 The Styling on the logout, page is not done as i would not have enough time. (booking styles is part done)
 I have a little bit of code done for the automated testing as seen in backgroundcode/test_forms.py but i don't have enough code done for the tests.py files and also because the CI database was being faulty.
+signup styling is not loading and after you click submit, it just shows with "{"success": true}" rather than a popup with "booking successful".
 ## Features
 This section talks about the future features and features i have not had a chance to implement.
 ### Future features
