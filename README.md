@@ -144,8 +144,10 @@ Bite Bait has been extensively tested on various web browsers including edge, ch
 ### Automated Testing
 The test cases are all based from the 'I think therefore i blog' module on the CI LMS (learning management system)
 The 3 tests that are ran came back with originally 2 errors... then it went to 3 then back to 2 but currently as of 17:35 on 17/07/2024, it is down to 1 error.
-![Test image 1](./CI-project4/backgroundcode/static/backgroundcode/images/readme-images/test1.png)
+![Test image 1](./backgroundcode/static/backgroundcode/images/readme-images/test1.png)
 ![Test image 2](./backgroundcode/static/backgroundcode/images/readme-images/test2.png)
+- Test image 2 = the fix for this was to just get rid of the line causing the test to fail
+- Test image 3 = the fix for this was to also get rid of the line causing the test to fail
 ![Test Image 3](./backgroundcode/static/backgroundcode/images/readme-images/test3.png)
 ## Bugs
  This section is all about the annoying bugs which i either did fix or i did not have enough time to fix.
