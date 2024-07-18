@@ -140,10 +140,14 @@ Bite Bait has been extensively tested on various web browsers including edge, ch
 | Edge    | ✔                      |
 ### Validation Testing
 This subsection talks about the different test validators and if the code passed through that fine.
+I know that not all of the files are tested but i wanted to make sure that there at least was some testing done (manual, validation and automated)
 #### HTML Testing
-
+![base.html part 1](./backgroundcode/static/backgroundcode/images/readme-images/base.html%20error%20part%201.png)
+![base.html part 2](./backgroundcode/static/backgroundcode/images/readme-images/base.html%20error%20part%202.png)
+These images are for the base.html file (This caused an error) which when corrected make a different load of error messages appearing.
 #### CSS Testing
-#### JS Testing
+CSS testing passed first time with no errors given
+![CSS image](./backgroundcode/static/backgroundcode/images/readme-images/css%20passing.png)
 ### Manual Testing
 - checked for login to work (Before 14/07/2024 CI database error)
 - Checked for site to load (Before 14/07/2024 CI database error)
