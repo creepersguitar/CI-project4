@@ -21,6 +21,8 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 14. [Contact](#contact)
 ## Please note
 There was a personal CI Database issue with connecting my application to the CI database issue which started again on the 16/07/2024 and there was not enough time to debug and fix the issue (This Was out of my control!) So i want you to bare this in mind when you assess this project incase it goes again while you are assessing it :D
+Yes the base.html file was ran through the html validator and there was errors but i wouldn't have enough time to fix and document them before submission.
+I also want the assessment team to know that i have done as much as i can, because the submission deadline of the 21st i am working 9-7. The 19th and 20th i am also working so i only have today the 18th of july to submit this application.
 ## unfinished parts
 This section is to talk about the parts of bite bait i have built but not had time to test as well as link back to the main part.
 The main parts that i have not had enough time to add are the deleting bookings as well as editing bookings and deleting account details.
