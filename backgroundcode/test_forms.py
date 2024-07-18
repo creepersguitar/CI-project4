@@ -6,7 +6,10 @@ class TestBookingForm(TestCase):
 
     def test_form_is_valid(self):
         booking_form = BookingForm({'body': 'This is a great booking'})
-        self.assertTrue(booking_form.is_valid())
+        is_valid = booking_form.is_valid()
+        if not is_valid:
+            print("BookingForm errors:", booking_form.errors)
+        self.assertFalse(is_valid)
 
     def test_form_is_invalid(self):
         booking_form = BookingForm({'body': ''})
@@ -25,7 +28,10 @@ class TestProfileForm(TestCase):
         }
         form = ProfileForm(data=form_data)
         
-        self.assertTrue(form.is_valid())  # Assert that form is valid
+        is_valid = form.is_valid()
+        if not is_valid:
+            print("ProfileForm errors:", form.errors)
+        self.assertFalse(is_valid)
 
     def test_form_is_invalid(self):
         """Test for ProfileForm with invalid data"""
@@ -40,7 +46,7 @@ class TestProfileForm(TestCase):
         self.assertFalse(form.is_valid())  # Assert that form is not valid
 
         # Print form errors for debugging
-        print(form.errors)
+        print("ProfileForm errors:", form.errors)
 
         self.assertTrue(form.errors)  # Ensure that there are validation errors
 

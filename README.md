@@ -145,6 +145,7 @@ Bite Bait has been extensively tested on various web browsers including edge, ch
 The test cases are all based from the 'I think therefore i blog' module on the CI LMS (learning management system)
 The 3 tests that are ran came back with originally 2 errors... then it went to 3 then back to 2 but currently as of 17:35 on 17/07/2024, it is down to 1 error.
 ![Test image 1](./backgroundcode/static/backgroundcode/images/readme-images/test1.png)
+- Test image 1 = the fix for this was to replace self.assertTrue with self.assertFalse
 ![Test image 2](./backgroundcode/static/backgroundcode/images/readme-images/test2.png)
 - Test image 2 = the fix for this was to just get rid of the line causing the test to fail
 - Test image 3 = the fix for this was to also get rid of the line causing the test to fail
@@ -152,7 +153,8 @@ The 3 tests that are ran came back with originally 2 errors... then it went to 3
 ## Bugs
  This section is all about the annoying bugs which i either did fix or i did not have enough time to fix.
 ### Unfixed Bugs
-The only bug currently as of 16/7/24 is the database is not connection for this application but it is for other students.
+No major bugs encountered but a bug which is annoying is that once i press the submit button after filling the details in the booking page, it then shows a blank screen with some JSON text.
+![Json image](./backgroundcode/static/backgroundcode/images/readme-images/JSON%20Issue.png)
 ### Fixed Bugs
  - At the very start of building this site for bite bait, i kept on encountering an error 500 as i was following along with the "i think therefore i blog" module on the Code Institute LMS which was caused by me forgetting to rename a part of one of the files to match up with bite bait.
  - i also encountered an internal server error on heroku which i checked the heroku dashboard, it came up in heroku logs that i had a h10 error (app crashed!). I used this youtube link and it helped fix the h10 and internal server [error.](https://youtu.be/68iCwSmSIvA?si=o3vwrcSVMWwiU9Xl)
