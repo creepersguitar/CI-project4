@@ -1,4 +1,3 @@
-
 /* General Styles */
 body {
     background-color: #F9FAFC;
@@ -237,4 +236,72 @@ body {
 
 .booking-detail p strong {
     font-weight: bold;
+}
+
+/* Media Queries */
+
+/* Small devices (max-width 600px) */
+@media (max-width: 600px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+    .masthead {
+        height: 20vh;
+    }
+    .hero-text {
+        font-size: 18px;
+    }
+    .booking-detail {
+        padding: 1rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.2rem;
+    }
+    .booking-detail p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Medium devices (max-width 768px) */
+@media (max-width: 768px) {
+    .brand {
+        font-size: 1.3rem;
+    }
+    .masthead {
+        height: 25vh;
+    }
+    .hero-text {
+        font-size: 20px;
+    }
+    .booking-detail {
+        padding: 1.5rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.3rem;
+    }
+    .booking-detail p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Large devices (max-width 1024px) */
+@media (max-width: 1024px) {
+    .brand {
+        font-size: 1.35rem;
+    }
+    .masthead {
+        height: 28vh;
+    }
+    .hero-text {
+        font-size: 22px;
+    }
+    .booking-detail {
+        padding: 1.75rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.4rem;
+    }
+    .booking-detail p {
+        font-size: 1rem;
+    }
 }

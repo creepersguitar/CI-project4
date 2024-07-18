@@ -138,6 +138,12 @@ Bite Bait has been extensively tested on various web browsers including edge, ch
 | Safari  | ✔                      |
 | Ecosia  | ✔                      |
 | Edge    | ✔                      |
+### Validation Testing
+This subsection talks about the different test validators and if the code passed through that fine.
+#### HTML Testing
+
+#### CSS Testing
+#### JS Testing
 ### Manual Testing
 - checked for login to work (Before 14/07/2024 CI database error)
 - Checked for site to load (Before 14/07/2024 CI database error)
