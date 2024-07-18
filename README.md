@@ -155,6 +155,7 @@ The 3 tests that are ran came back with originally 2 errors... then it went to 3
 ### Unfixed Bugs
 No major bugs encountered but a bug which is annoying is that once i press the submit button after filling the details in the booking page, it then shows a blank screen with some JSON text.
 ![Json image](./backgroundcode/static/backgroundcode/images/readme-images/JSON%20Issue.png)
+The other minor bug is that the styling for the signout page 
 ### Fixed Bugs
  - At the very start of building this site for bite bait, i kept on encountering an error 500 as i was following along with the "i think therefore i blog" module on the Code Institute LMS which was caused by me forgetting to rename a part of one of the files to match up with bite bait.
  - i also encountered an internal server error on heroku which i checked the heroku dashboard, it came up in heroku logs that i had a h10 error (app crashed!). I used this youtube link and it helped fix the h10 and internal server [error.](https://youtu.be/68iCwSmSIvA?si=o3vwrcSVMWwiU9Xl)
