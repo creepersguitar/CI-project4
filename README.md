@@ -6,19 +6,20 @@ View bite bait [here!](https://ci-project4-django-c7dcfccbb88c.herokuapp.com/)
 
 ## contents
 1. [Unfinished parts](#unfinished-parts)
-2. [Features](#features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Code Structure](#structure)
-6. [UX](#ux)
-7. [Testing](#testing)
-8. [Bugs](#bugs)
-9. [Deployment](#deployment)
-10. [User Stories](#user-stories)
-11. [Design](#design)
-12. [Sources and credits](#sources-and-credits)
-13. [Contributing](#contribute)
-14. [Contact](#contact)
+2. [Resubmission details](#resubmission-details)
+3. [Features](#features)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Code Structure](#structure)
+7. [UX](#ux)
+8. [Testing](#testing)
+9. [Bugs](#bugs)
+10. [Deployment](#deployment)
+11. [User Stories](#user-stories)
+12. [Design](#design)
+13. [Sources and credits](#sources-and-credits)
+14. [Contributing](#contribute)
+15. [Contact](#contact)
 ## Please note
 There was a personal CI Database issue with connecting my application to the CI database issue which started again on the 16/07/2024 and there was not enough time to debug and fix the issue (This Was out of my control!) So i want you to bare this in mind when you assess this project incase it goes again while you are assessing it :D
 Yes the base.html file was ran through the html validator and there was errors but i wouldn't have enough time to fix and document them before submission.
@@ -30,6 +31,8 @@ all of the main forms are done but the signup form does not send data to the /ad
 The Styling on the logout, page is not done as i would not have enough time. (booking styles is part done)
 I have a little bit of code done for the automated testing as seen in backgroundcode/test_forms.py but i don't have enough code done for the tests.py files and also because the CI database was being faulty.
 signup styling is not loading and after you click submit, it just shows with "{"success": true}" rather than a popup with "booking successful".
+## Resubmission details
+
 ## Features
 This section talks about the future features and features i have not had a chance to implement.
 ### Future features
@@ -176,14 +179,29 @@ The other minor bug is that the styling for the signout page is in style.css but
 ## Deployment
 Bite Bait was deployed via Heroku following these steps:
 1. Create requirements.txt.
+    - Within your development site such as visual studio or VSCode or Gitpod right click in the project folder mine is CI-PROJECT-4.
+    ![Project-Folder](../CI-project4/backgroundcode/static/backgroundcode/images/readme-images/folderview.png)
 2. Push to GitHub.
+    - Click on the terminal
+    ![Terminal](./backgroundcode/static/backgroundcode/images/readme-images/clear-terminal.png)
+    - You then type without the quotes, "git add ."
+    - Then you type "git commit -m <message>"
+        - Note that <message> should be a brief couple of words to tell other developers what you are committing
+    - Finally you type "git push"
 3. Sign up/login to Heroku.
+
 4. Create a new app.
 5. Set up configuration variables.
 6. Connect GitHub repository.
 7. Choose deployment method (manual or automatic).
+    - Manual means you have to deploy it every single time you do a git push
+    - Automatic means you don't have to manually deploy it every single git push heroku does it for you.
+    - My preference is automatic as it is quicker and so i don't have to worry about remembering it
 8. Wait for Heroku to build the application.
+    - There is not much you can do while you wait as it takes less than 5 minutes
+    - Have a drink or grab a snack to enjoy.
 9. Open the app and enjoy!
+    - Just click on the button which says open app then you can enjoy bite baits website
 ## User Stories
 This section is about making user stories and just in general talking about them.
 ### Make user stories
