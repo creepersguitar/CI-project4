@@ -32,6 +32,11 @@ The Styling on the logout, page is not done as i would not have enough time. (bo
 I have a little bit of code done for the automated testing as seen in backgroundcode/test_forms.py but i don't have enough code done for the tests.py files and also because the CI database was being faulty.
 signup styling is not loading and after you click submit, it just shows with "{"success": true}" rather than a popup with "booking successful".
 ## Resubmission details
+This section details the resubmission requirements and what i have done to fufil these.
+**1.1** this is saying add more UX design requirements.
+    - Bite bait asked me to keep the UX simplistic as that is what their restaurants are.
+**6.3** This is saying to expand deployment part of readme
+    - Expanded deployment part of readme file
 
 ## Features
 This section talks about the future features and features i have not had a chance to implement.
@@ -181,18 +186,60 @@ Bite Bait was deployed via Heroku following these steps:
 1. Create requirements.txt.
     - Within your development site such as visual studio or VSCode or Gitpod right click in the project folder mine is CI-PROJECT-4.
     ![Project-Folder](../CI-project4/backgroundcode/static/backgroundcode/images/readme-images/folderview.png)
+1.5 Freeze the requirements.txt file
+    - within the terminal type "pip3 freeze > requirements.txt"
+    - Please note that when you type requirements.txt you should ensure that the file is spelt correctly in order for it to work.
 2. Push to GitHub.
-    - Click on the terminal
+    - Click on the 
     ![Terminal](./backgroundcode/static/backgroundcode/images/readme-images/clear-terminal.png)
     - You then type without the quotes, "git add ."
     - Then you type "git commit -m <message>"
         - Note that <message> should be a brief couple of words to tell other developers what you are committing
     - Finally you type "git push"
 3. Sign up/login to Heroku.
-
+    - Open up your browser of choice (I use chrome)
+    - In the search bar type "https://www.heroku.com/"
+    - Then in the top right hand corner of the web page you can either click on Log in or sign up
+3i. Sign up to heroku
+    - click on the sign up button
+    - then you fill out the form with name, email, country, base language (language being used the most) and role (for me the role was student)
+    - open your email and click on the link to confirm
+    - then create your password
+    - then you can login
+    - then click accept for the t&c's 
+3ii. Login to heroku
+    - If you have already got an account with heroku you can just input your username and password
+    - Then just validate with the salesforce authenticator app and then go into step 4
+3iii. Set up student pack (for Code institute students)
+    **Please note that this section is only for CI students**
+    - within the search bar type "https://www.heroku.com/github-students"
+    - Then click on "Get the student offer"
+    - If needed login to heroku as seen in step 3ii
+    - Click verify with github
+    - Then click "Authorize Heroku"
+    - Then you add your payment details or validate them if you have already added them
+    - Enter your details such as "Code Institute" for the school name
+    - Read T&c's then click agree
+    - Then a thank you message appears telling you it takes upwards of 24 hours to process the request
+    - When confirmation email comes through, check the amount of credits shoud be $156.00
 4. Create a new app.
+    - Click on "Create new app"
+    - Then you must make a name for the application (each name has to be unique)
+    - Click on the drop down underneath to pick where this application will be located (for me its europe)
 5. Set up configuration variables.
+    - Click onto the settings tab
+    - Scroll down to the config vars section
+    - Then you add your required config vars
+5.5 Add buildpacks
+    - underneath the config vars section should be the buildpacks section
+    - some projects will be needing these so click on add buildpack
+    - add the required language from the buildpack selection
 6. Connect GitHub repository.
+    - navigate to the deploy tab
+    - in the deployment section click on connect to github
+    - confirm that you want to connect with your github account
+    - Then you can search for the repository name.
+    - Click connect to connect the repo to heroku
 7. Choose deployment method (manual or automatic).
     - Manual means you have to deploy it every single time you do a git push
     - Automatic means you don't have to manually deploy it every single git push heroku does it for you.
