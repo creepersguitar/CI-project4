@@ -1,8 +1,9 @@
 {% extends "account/base.html" %}
 {% load i18n %}
+{% load static %}  {# Load the static tag library #}
 
 {% block head %}
-    {{ block.super }}  {# This will include everything already in the head block from the base template #}
+    {{ block.super }}
     <link rel="stylesheet" href="{% static 'backgroundcode/css/style.css' %}">
 {% endblock head %}
 
