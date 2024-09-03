@@ -294,6 +294,10 @@ Now that we have a project board set up, we can make the user stories.
 User stories are great to simplify and organise the tasks that are needed to be done for projects or different applications such as bite bait. They can however, take a chunk of project time away from development so in between future projects i would like to develop a script to help automate the creation of user stories in github projects.
 ## Design
 Bite bait was designed as a booking system for a restaurant to streamline their booking process.
+### UX Design
+The UX design for Bite bait was intended to be simplistic as that's the style for their restaurants.
+Coincidentally, their colour scheme was black and orange.
+In future versions if needed, i will make sure that the colour scheme is something new.
 ### Wireframe Design
 The wireframe design was done via [wireframe.cc](https://wireframe.cc/)
 ![Wireframe-view](backgroundcode/static/backgroundcode/images/readme-images/wireframe-main.png)
