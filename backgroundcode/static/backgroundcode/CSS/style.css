@@ -86,8 +86,6 @@ body {
     height: 100%;
     width: 150%;
     background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
 }
@@ -102,7 +100,7 @@ body {
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     z-index: 1000;
-    display: none; /* Initially hidden */
+    display: none;
 }
 
 .post-link {
@@ -237,6 +235,7 @@ body {
 .booking-detail p strong {
     font-weight: bold;
 }
+
 /* Signup Form Styles */
 .signup h1 {
     font-family: 'Lato', sans-serif;
@@ -303,6 +302,9 @@ body {
 
 /* Small devices (max-width 600px) */
 @media (max-width: 600px) {
+    body {
+        font-size: 0.9rem;
+    }
     .brand {
         font-size: 1.2rem;
     }
@@ -325,6 +327,9 @@ body {
 
 /* Medium devices (max-width 768px) */
 @media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
     .brand {
         font-size: 1.3rem;
     }
@@ -347,6 +352,9 @@ body {
 
 /* Large devices (max-width 1024px) */
 @media (max-width: 1024px) {
+    body {
+        font-size: 1.1rem;
+    }
     .brand {
         font-size: 1.35rem;
     }
