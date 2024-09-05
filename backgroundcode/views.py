@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView
 from .forms import BookingForm
 from .models import Booking
-from django.http import JsonResponse
 import logging
 
 logger = logging.getLogger(__name__)
@@ -34,14 +33,15 @@ def create_booking(request):
             booking = form.save(commit=False)
             booking.author = request.user  # Set the author to the current user
             booking.save()
-            # Assuming you want to return a JSON response indicating success
-            return JsonResponse({'success': True})
+            
+            # Redirect to a success page or another relevant page after successful booking
+            return redirect('booking_success')  # Replace 'booking_success' with the appropriate URL name
 
-        # Handle form errors if not valid
-        errors = form.errors.as_json()
-        return JsonResponse({'success': False, 'errors': errors})
-    else:
-        form = BookingForm()
+        # If the form is invalid, re-render the form with the errors
+        return render(request, 'create_booking.html', {'form': form})
+
+    # For GET requests, render the booking form
+    form = BookingForm()
     return render(request, 'create_booking.html', {'form': form})
 
 @login_required
@@ -49,3 +49,6 @@ def booking_detail(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     heroLink = 'booking_detail'
     return render(request, 'booking_detail.html', {'booking': booking})
+
+def booking_successful(request):
+    return render(request, 'booking_success.html')

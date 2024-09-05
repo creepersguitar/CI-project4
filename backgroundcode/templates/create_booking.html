@@ -10,15 +10,29 @@
 <body>
     <div class="container mt-5">
         <h1>Create a New Booking</h1>
-        <h3>When you input date, it needs to be "yyyy-mm-dd"</h3>
+        <h3>Please input date in "yyyy-mm-dd" format</h3>
+        
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="submit">Submit</button>
+            {{ form.as_p }}  <!-- This will display the form fields -->
+            
+            <!-- Display form errors if they exist -->
+            {% if form.errors %}
+                <div class="alert alert-danger">
+                    <ul>
+                        {% for field in form %}
+                            {% if field.errors %}
+                                <li>{{ field.label }}: {{ field.errors|striptags }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-    <!-- Hidden Popup content -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../static/backgroundcode/Javascript/script.js"></script>
 </body>
 </html>
