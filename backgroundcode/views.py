@@ -35,8 +35,7 @@ def create_booking(request):
             booking.save()
             
             # Redirect to a success page or another relevant page after successful booking
-            return redirect('booking_success')  # Replace 'booking_success' with the appropriate URL name
-
+            return redirect('booking_successful')
         # If the form is invalid, re-render the form with the errors
         return render(request, 'create_booking.html', {'form': form})
 
