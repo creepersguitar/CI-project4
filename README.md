@@ -35,6 +35,11 @@ signup styling is not loading and after you click submit, it just shows with "{"
 This section details the resubmission requirements and what i have done to fufil these.
 **1.1** this is saying add more UX design requirements.
     - Bite bait asked me to keep the UX simplistic as that is what their restaurants are.
+
+**3.1** Fix all bugs
+    - Fixed bug which does not make a page styled
+    -
+
 **6.3** This is saying to expand deployment part of readme
     - Expanded deployment part of readme file
 
@@ -298,6 +303,7 @@ Bite bait was designed as a booking system for a restaurant to streamline their 
 The UX design for Bite bait was intended to be simplistic as that's the style for their restaurants.
 Coincidentally, their colour scheme was black and orange.
 In future versions if needed, i will make sure that the colour scheme is something new.
+I have also ensured that all pages are properly styled and are more responsive.
 ### Wireframe Design
 The wireframe design was done via [wireframe.cc](https://wireframe.cc/)
 ![Wireframe-view](backgroundcode/static/backgroundcode/images/readme-images/wireframe-main.png)
