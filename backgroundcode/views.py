@@ -55,8 +55,8 @@ def booking_successful(request):
     return render(request, 'booking_success.html')
 
 @login_required
-def view_bookings(request):
+def view_booking(request):
     # Get all bookings for the logged-in user
     bookings = Booking.objects.filter(user=request.user)
     # Render the bookings in the template
-    return render(request, 'bookings/view_bookings.html', {'bookings': bookings})
+    return render(request, 'bookings/view_booking.html', {'bookings': bookings})
