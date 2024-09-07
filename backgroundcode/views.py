@@ -53,3 +53,10 @@ def booking_detail(request, booking_id):
 # View for successful booking
 def booking_successful(request):
     return render(request, 'booking_success.html')
+
+@login_required
+def view_bookings(request):
+    # Get all bookings for the logged-in user
+    bookings = Booking.objects.filter(user=request.user)
+    # Render the bookings in the template
+    return render(request, 'bookings/view_bookings.html', {'bookings': bookings})
