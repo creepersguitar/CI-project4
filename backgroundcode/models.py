@@ -35,7 +35,7 @@ class Profile(models.Model):
         return f"Profile of {self.name.username}"
 
 class Booking(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="bookings")
+    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="bookings")
     created_on = models.DateTimeField(auto_now_add=True)    
     name = models.CharField(max_length=100, default='default_name')
     time = models.TimeField(default=time(12,0))
