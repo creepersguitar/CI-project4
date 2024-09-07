@@ -7,7 +7,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
+# ListView to display bookings
 class BookListView(ListView):
     model = Booking
     template_name = 'index.html'
@@ -24,7 +24,7 @@ class BookListView(ListView):
             logger.error("Error fetching bookings: %s", e)
             return []
 
-
+# View to create a booking
 @login_required
 def create_booking(request):
     if request.method == 'POST':
@@ -34,8 +34,9 @@ def create_booking(request):
             booking.author = request.user  # Set the author to the current user
             booking.save()
             
-            # Redirect to a success page or another relevant page after successful booking
-            return redirect('booking_successful')
+            # Redirect to the 'booking_success' page after successful booking
+            return redirect('booking_success')  # Ensure URL pattern matches this name
+        
         # If the form is invalid, re-render the form with the errors
         return render(request, 'create_booking.html', {'form': form})
 
@@ -43,11 +44,12 @@ def create_booking(request):
     form = BookingForm()
     return render(request, 'create_booking.html', {'form': form})
 
+# View to display a booking's details
 @login_required
 def booking_detail(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
-    heroLink = 'booking_detail'
     return render(request, 'booking_detail.html', {'booking': booking})
 
+# View for successful booking
 def booking_successful(request):
     return render(request, 'booking_success.html')
