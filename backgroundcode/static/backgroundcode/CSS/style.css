@@ -91,6 +91,41 @@ body {
     z-index: 100;
 }
 
+.main-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.main-table th, .main-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-table th {
+    background-color: #188181;
+    color: #fff;
+}
+
+.main-table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.main-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    color: #999;
+    margin-top: 20px;
+}
+
 .popup {
     position: fixed;
     top: 50%;

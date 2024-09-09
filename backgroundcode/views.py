@@ -59,5 +59,8 @@ def view_booking(request):
     # Get all bookings for the logged-in user (author)
     bookings = Booking.objects.filter(author=request.user)
     
+    # Log the number of bookings retrieved
+    logger.debug(f"Number of bookings found: {bookings.count()}")
+
     # Render the bookings in the template
     return render(request, 'view_booking.html', {'bookings': bookings})
