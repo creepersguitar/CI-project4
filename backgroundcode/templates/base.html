@@ -60,7 +60,9 @@
             <div class="hero-text-box">
                 <button><a href="{% url 'create_booking' %}">Create a booking now!</a></button>
 
-                <button><a href="{% url 'view_booking' %}">View Bookings here!</a></button>
+                <button>
+                    <a href="{% url 'view_bookings' %}">View Bookings</a>
+                </button>
             </div>
         </div>
         {% endblock %}
