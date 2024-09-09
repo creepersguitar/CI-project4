@@ -60,4 +60,4 @@ def view_booking(request):
     bookings = Booking.objects.filter(author=request.user)
     
     # Render the bookings in the template
-    return render(request, 'bookings/view_booking.html', {'bookings': bookings})
+    return render(request, 'view_booking.html', {'bookings': bookings})
