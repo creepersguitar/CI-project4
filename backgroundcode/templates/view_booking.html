@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/backgroundcode/CSS/style.css">
     <title>View Bookings</title>
 </head>
 <body>
     <h1>Your Bookings</h1>
 
     {% if bookings %}
-        <table>
-            <thead>
+        <table class="main-table">
+            <thead id="table-head">
                 <tr>
                     <th>Date</th>
                     <th>Time</th>
@@ -19,7 +20,7 @@
                     <th>Status</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="table-body">
                 {% for booking in bookings %}
                     <tr>
                         <td>{{ booking.booking_date }}</td>
