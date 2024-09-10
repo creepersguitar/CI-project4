@@ -97,8 +97,7 @@ body {
 }
 
 .main-table {
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
     border-collapse: collapse;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -244,12 +243,6 @@ p {
     color: #333;
 }
 
-/* Booking page styles */
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
 .booking-container {
     background: #fff;
     padding: 2rem;
@@ -264,8 +257,8 @@ p {
     margin-bottom: 20px;
 }
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
