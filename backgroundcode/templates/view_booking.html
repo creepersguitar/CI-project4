@@ -24,16 +24,15 @@
                 <tbody id="table-body">
                     {% for booking in bookings %}
                         <tr>
-                            <td>{{ booking.booking_date }}</td>
-                            <td>{{ booking.booking_time }}</td>
-                            <td>{{ booking.service }}</td>
-                            <td>
-                                <span class="status-label 
-                                    {% if booking.status == 'Confirmed' %} confirmed {% elif booking.status == 'Pending' %} pending {% else %} cancelled {% endif %}
-                                ">
-                                    {{ booking.status }}
-                                </span>
-                            </td>
+                            <td>{{ booking.date }}</td>
+                            <td>{{ booking.time }}</td>
+                            <td>{{ booking.name }}</td> <!-- Assuming `name` is the service -->
+                            <td>{{ booking.guests }}</td>
+                            <span class="status-label 
+                            {% if booking.status == 'Confirmed' %} confirmed {% elif booking.status == 'Pending' %} pending {% else %} cancelled {% endif %}
+                        ">
+                            {{ booking.status }}
+                            </span>
                         </tr>
                     {% endfor %}
                 </tbody>
