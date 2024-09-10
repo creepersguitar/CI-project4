@@ -63,5 +63,5 @@ def view_booking(request):
     logger.debug(f"Number of bookings found: {bookings.count()}")
 
     # Render the bookings in the template
-    return render(request, 'bookings/view_booking.html', {'bookings': bookings})
+    return render(request, 'backgroundcode/view_booking.html', {'bookings': bookings})
 
