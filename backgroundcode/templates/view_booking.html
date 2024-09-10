@@ -1,38 +1,45 @@
-<!-- templates/bookings/view_booking.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/backgroundcode/CSS/style.css">
+    <link rel="stylesheet" href="{% static 'backgroundcode/CSS/style.css' %}">
     <title>View Bookings</title>
 </head>
 <body>
-    <h1>Your Bookings</h1>
+    <div class="container booking-container">
+        <h1 class="booking-title">Your Bookings</h1>
 
-    {% if bookings %}
-        <table class="main-table">
-            <thead id="table-head">
-                <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Service</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-                {% for booking in bookings %}
+        {% if bookings %}
+            <table class="main-table">
+                <thead id="table-head">
                     <tr>
-                        <td>{{ booking.booking_date }}</td>
-                        <td>{{ booking.booking_time }}</td>
-                        <td>{{ booking.service }}</td>
-                        <td>{{ booking.status }}</td>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Service</th>
+                        <th>Status</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p>No bookings found.</p>
-    {% endif %}
+                </thead>
+                <tbody id="table-body">
+                    {% for booking in bookings %}
+                        <tr>
+                            <td>{{ booking.booking_date }}</td>
+                            <td>{{ booking.booking_time }}</td>
+                            <td>{{ booking.service }}</td>
+                            <td>
+                                <span class="status-label 
+                                    {% if booking.status == 'Confirmed' %} confirmed {% elif booking.status == 'Pending' %} pending {% else %} cancelled {% endif %}
+                                ">
+                                    {{ booking.status }}
+                                </span>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No bookings found.</p>
+        {% endif %}
+    </div>
 </body>
 </html>

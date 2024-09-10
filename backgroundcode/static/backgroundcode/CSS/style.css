@@ -1,4 +1,9 @@
-/* General Styles */
+:root {
+    --primary-color: #188181;
+    --secondary-color: #E84610;
+    --text-color: #445261;
+}
+
 body {
     background-color: #F9FAFC;
     font-family: 'Lato', sans-serif;
@@ -258,7 +263,29 @@ p {
     color: #188181;
     margin-bottom: 20px;
 }
-
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.status-label {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+}
+.status-label.confirmed {
+    background-color: #188181;
+}
+.status-label.pending {
+    background-color: #f0ad4e;
+}
+.status-label.cancelled {
+    background-color: #e84610;
+}
 .booking-instruction {
     text-align: center;
     color: #999;
