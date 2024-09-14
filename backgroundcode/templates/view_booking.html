@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="../static/backgroundcode/CSS/style.css">
-    <title>Bookings</title>
+    <link rel="stylesheet" href="{% static 'backgroundcode/CSS/style.css' %}">
+    <title>View Bookings</title>
 </head>
 <body>
     <div class="container booking-container">
@@ -17,8 +17,9 @@
                     <tr>
                         <th>Date</th>
                         <th>Time</th>
-                        <th>Name</th>
+                        <th>Service</th>
                         <th>Status</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody id="table-body">
@@ -26,8 +27,19 @@
                         <tr>
                             <td>{{ booking.date }}</td>
                             <td>{{ booking.time }}</td>
-                            <td>{{ booking.name }}</td>
+                            <td>{{ booking.name }}</td> <!-- Assuming `name` is the service -->
                             <td>{{ booking.guests }}</td>
+                            <td>
+                                <!-- Update Button -->
+                                <form action="{% url 'update_booking' booking.id %}" method="get" style="display:inline;">
+                                    <button type="submit" class="btn btn-update">Update</button>
+                                </form>
+                                <!-- Delete Button -->
+                                <form action="{% url 'delete_booking' booking.id %}" method="post" style="display:inline;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this booking?');">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -35,6 +47,11 @@
         {% else %}
             <p>No bookings found.</p>
         {% endif %}
+    </div>
+
+    <!-- Button to go back to the home page -->
+    <div class="button-container">
+        <a href="{% url 'home' %}" class="btn btn-home">Go Back to Home</a>
     </div>
 </body>
 </html>
