@@ -162,6 +162,26 @@ p {
     margin-left: 5%;
     color: lightgray;
 }
+/* View booking button styles */
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+.btn-update {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.btn-home {
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
 
 .btn-signup,
 .btn-edit {
@@ -193,8 +213,8 @@ p {
 }
 
 .btn-delete {
-    color: #fff;
-    background: #E84610;
+    background-color: #f44336; /* Red */
+    color: white;
 }
 
 .btn-like:hover,

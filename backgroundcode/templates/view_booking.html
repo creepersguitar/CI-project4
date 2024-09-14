@@ -17,7 +17,7 @@
                     <tr>
                         <th>Date</th>
                         <th>Time</th>
-                        <th>Service</th>
+                        <th>Name</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -30,15 +30,11 @@
                             <td>{{ booking.name }}</td> <!-- Assuming `name` is the service -->
                             <td>{{ booking.guests }}</td>
                             <td>
-                                <!-- Update Button -->
-                                <form action="{% url 'update_booking' booking.id %}" method="get" style="display:inline;">
-                                    <button type="submit" class="btn btn-update">Update</button>
-                                </form>
-                                <!-- Delete Button -->
-                                <form action="{% url 'delete_booking' booking.id %}" method="post" style="display:inline;">
-                                    {% csrf_token %}
-                                    <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this booking?');">Delete</button>
-                                </form>
+                                <!-- Link to Update Booking -->
+                                <a href="{% url 'update_booking' booking.id %}" class="btn btn-update">Update</a>
+                                
+                                <!-- Link to Delete Booking -->
+                                <a href="{% url 'delete_booking' booking.id %}" class="btn btn-delete">Delete</a>
                             </td>
                         </tr>
                     {% endfor %}

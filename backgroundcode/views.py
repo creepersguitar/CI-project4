@@ -65,3 +65,42 @@ def view_booking(request):
     # Render the bookings in the template
     return render(request, 'view_booking.html', {'bookings': bookings})
 
+@login_required
+def update_booking(request, booking_id):
+    # Get the booking instance based on the booking ID
+    booking = get_object_or_404(Booking, id=booking_id)
+
+    # Ensure that the user updating the booking is the author of the booking
+    if booking.author != request.user:
+        return redirect('view_booking')  # Redirect if user is not the author
+    
+    # Handle the POST request to update the booking
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)  # Pass the existing booking to the form
+        if form.is_valid():
+            form.save()  # Save the updated booking
+            return redirect('view_booking')  # Redirect to the bookings list after updating
+    
+    # Handle the GET request by pre-filling the form with the current booking details
+    else:
+        form = BookingForm(instance=booking)  # Pre-fill the form with current booking details
+
+    # Render the form for updating the booking
+    return render(request, 'update_booking.html', {'form': form, 'booking': booking})
+
+@login_required
+def delete_booking(request, booking_id):
+    # Get the booking instance
+    booking = get_object_or_404(Booking, id=booking_id)
+
+    # Ensure that the user deleting the booking is the author of the booking
+    if booking.author != request.user:
+        return redirect('view_booking')  # Redirect if user is not the author
+    
+    # Handle POST request to delete the booking
+    if request.method == 'POST':
+        booking.delete()  # Delete the booking
+        return redirect('view_booking')  # Redirect to the bookings list after deletion
+
+    # Render a confirmation page before deleting (optional)
+    return render(request, 'confirm_delete.html', {'booking': booking})
