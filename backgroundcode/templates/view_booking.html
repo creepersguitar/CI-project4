@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'backgroundcode/CSS/style.css' %}">
-    <title>View Bookings</title>
+    <link rel="stylesheet" href="../static/backgroundcode/CSS/style.css">
+    <title>Bookings</title>
 </head>
 <body>
     <div class="container booking-container">
@@ -17,7 +17,7 @@
                     <tr>
                         <th>Date</th>
                         <th>Time</th>
-                        <th>Service</th>
+                        <th>Name</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -26,7 +26,7 @@
                         <tr>
                             <td>{{ booking.date }}</td>
                             <td>{{ booking.time }}</td>
-                            <td>{{ booking.name }}</td> <!-- Assuming `name` is the service -->
+                            <td>{{ booking.name }}</td>
                             <td>{{ booking.guests }}</td>
                         </tr>
                     {% endfor %}
