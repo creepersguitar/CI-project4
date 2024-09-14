@@ -103,4 +103,4 @@ def delete_booking(request, booking_id):
         return redirect('view_booking')  # Redirect to the bookings list after deletion
 
     # Render a confirmation page before deleting (optional)
-    return render(request, 'confirm_delete.html', {'booking': booking})
+    return render(request, 'delete_booking.html', {'booking': booking})
