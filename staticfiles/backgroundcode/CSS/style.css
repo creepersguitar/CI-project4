@@ -1,10 +1,16 @@
-/* General Styles */
+:root {
+    --primary-color: #188181;
+    --secondary-color: #E84610;
+    --text-color: #445261;
+}
+
 body {
     background-color: #F9FAFC;
+    font-family: 'Lato', sans-serif;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
@@ -86,10 +92,55 @@ body {
     height: 100%;
     width: 150%;
     background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
+}
+
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.main-table th, .main-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-table th {
+    background-color: #188181;
+    color: #fff;
+}
+
+.main-table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.main-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    color: #999;
+    margin-top: 20px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none;
 }
 
 .post-link {
@@ -110,6 +161,26 @@ body {
 .post-subtitle {
     margin-left: 5%;
     color: lightgray;
+}
+/* View booking button styles */
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+.btn-update {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.btn-home {
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .btn-signup,
@@ -142,8 +213,8 @@ body {
 }
 
 .btn-delete {
-    color: #fff;
-    background: #E84610;
+    background-color: #f44336; /* Red */
+    color: white;
 }
 
 .btn-like:hover,
@@ -190,4 +261,269 @@ body {
     font-weight: 700;
     font-size: 24px;
     color: #333;
+}
+
+.booking-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #188181;
+    margin-bottom: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.status-label {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+}
+.status-label.confirmed {
+    background-color: #188181;
+}
+.status-label.pending {
+    background-color: #f0ad4e;
+}
+.status-label.cancelled {
+    background-color: #e84610;
+}
+.booking-instruction {
+    text-align: center;
+    color: #999;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="date"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #188181;
+    box-shadow: 0 0 5px rgba(24, 129, 129, 0.3);
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #188181;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #23BBBB;
+}
+
+/* Booking detail styles */
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ececec, #f5f5f5);
+}
+
+.booking-detail {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.booking-detail h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.booking-detail p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.booking-detail p strong {
+    font-weight: bold;
+}
+
+/* Signup Form Styles */
+.signup h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    color: #445261;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup p {
+    font-size: 1rem;
+    color: #445261;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup a {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+    color: #445261;
+}
+
+.signup form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signup input[type="text"], .signup input[type="password"], .signup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+}
+
+.signup button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #188181;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+
+.signup button[type="submit"]:hover {
+    background-color: #23BBBB;
+}
+
+/* Media Queries */
+
+/* Small devices (max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9rem;
+    }
+    .brand {
+        font-size: 1.2rem;
+    }
+    .masthead {
+        height: 20vh;
+    }
+    .hero-text {
+        font-size: 18px;
+    }
+    .booking-title {
+        font-size: 1.6rem;
+    }
+    .booking-instruction {
+        font-size: 0.85rem;
+    }
+    .btn-submit {
+        font-size: 1rem;
+    }
+    .booking-detail {
+        padding: 1rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.2rem;
+    }
+    .booking-detail p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Medium devices (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+    .brand {
+        font-size: 1.3rem;
+    }
+    .masthead {
+        height: 25vh;
+    }
+    .hero-text {
+        font-size: 20px;
+    }
+    .booking-title {
+        font-size: 1.8rem;
+    }
+    .btn-submit {
+        font-size: 1.1rem;
+    }
+    .booking-detail {
+        padding: 1.5rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.3rem;
+    }
+    .booking-detail p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Large devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 1.1rem;
+    }
+    .brand {
+        font-size: 1.35rem;
+    }
+    .masthead {
+        height: 28vh;
+    }
+    .hero-text {
+        font-size: 22px;
+    }
+    .booking-detail {
+        padding: 1.75rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.4rem;
+    }
+    .booking-detail p {
+        font-size: 1rem;
+    }
 }
