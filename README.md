@@ -36,9 +36,19 @@ This section details the resubmission requirements and what i have done to fufil
 **1.1** this is saying add more UX design requirements.
     - Bite bait asked me to keep the UX simplistic as that is what their restaurants are.
 
+**1.3** This is saying to store and manipulate data
+    - This is possible but i have to split my time between this project and another project due 10 days after resubmission on 13/10/2024
+
+**1.13** This is saying to add the design process into the readme file
+    - added into readme file
+
+**2.2 and 2.3** This is saying to finish the CRUD development
+    - finished Delete of CRUD
+    - Finished update of CRUD
 **3.1** Fix all bugs
     - Fixed bug which does not make a page styled
-    -
+    - fixed bugs which causes broken links
+**3.3** Refer to the 2.2 and 2.3
 
 **6.3** This is saying to expand deployment part of readme
     - Expanded deployment part of readme file
