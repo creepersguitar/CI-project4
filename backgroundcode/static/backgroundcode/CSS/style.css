@@ -104,7 +104,8 @@ body {
     border-radius: 8px;
 }
 
-.main-table th, .main-table td {
+.main-table th,
+.main-table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -162,7 +163,7 @@ p {
     margin-left: 5%;
     color: lightgray;
 }
-/* View booking button styles */
+
 .btn {
     padding: 10px 15px;
     font-size: 16px;
@@ -170,14 +171,17 @@ p {
     cursor: pointer;
     margin: 5px;
 }
+
 .btn-update {
     background-color: #4CAF50; /* Green */
     color: white;
 }
+
 .btn-home {
     background-color: #2196F3; /* Blue */
     color: white;
 }
+
 .button-container {
     text-align: center;
     margin-top: 20px;
@@ -232,7 +236,6 @@ p {
     color: rgb(222, 146, 168);
 }
 
-/* Custom CSS for logo and hero text box */
 .logo-box {
     position: relative;
     text-align: center;
@@ -276,6 +279,7 @@ p {
     color: #188181;
     margin-bottom: 20px;
 }
+
 .container {
     max-width: 600px;
     margin: 20px auto;
@@ -284,21 +288,26 @@ p {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .status-label {
     padding: 5px 10px;
     border-radius: 4px;
     font-weight: bold;
     color: #fff;
 }
+
 .status-label.confirmed {
     background-color: #188181;
 }
+
 .status-label.pending {
     background-color: #f0ad4e;
 }
+
 .status-label.cancelled {
     background-color: #e84610;
 }
+
 .booking-instruction {
     text-align: center;
     color: #999;
@@ -312,7 +321,10 @@ p {
     gap: 15px;
 }
 
-input[type="text"], input[type="date"], input[type="email"], input[type="password"] {
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -321,7 +333,10 @@ input[type="text"], input[type="date"], input[type="email"], input[type="passwor
     transition: all 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
     border-color: #188181;
     box-shadow: 0 0 5px rgba(24, 129, 129, 0.3);
     outline: none;
@@ -343,7 +358,6 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, i
     background-color: #23BBBB;
 }
 
-/* Booking detail styles */
 .main-content {
     display: flex;
     align-items: center;
@@ -376,7 +390,6 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, i
     font-weight: bold;
 }
 
-/* Signup Form Styles */
 .signup h1 {
     font-family: 'Lato', sans-serif;
     font-size: 1.8rem;
@@ -411,7 +424,9 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, i
     margin: 0 auto;
 }
 
-.signup input[type="text"], .signup input[type="password"], .signup input[type="email"] {
+.signup input[type="text"],
+.signup input[type="password"],
+.signup input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;

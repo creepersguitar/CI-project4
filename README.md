@@ -49,7 +49,9 @@ This section details the resubmission requirements and what i have done to fufil
     - Fixed bug which does not make a page styled
     - fixed bugs which causes broken links
 **3.3** Refer to the 2.2 and 2.3
-
+**4** Testing
+    - Add more tests such as manual testing browser testing etc
+    - Added different tests for different html files
 **6.3** This is saying to expand deployment part of readme
     - Expanded deployment part of readme file
 
