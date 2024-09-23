@@ -545,92 +545,129 @@ input[type="password"]:focus {
 
 /* Media Queries */
 
-/* Small devices (max-width: 600px) */
-@media (max-width: 600px) {
+/* Very small devices (max-width: 480px) */
+@media (max-width: 480px) {
     body {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     .brand {
-        font-size: 1.2rem;
-    }
-    .masthead {
-        height: 20vh;
-    }
-    .hero-text {
-        font-size: 18px;
-    }
-    .booking-title {
-        font-size: 1.6rem;
-    }
-    .booking-instruction {
-        font-size: 0.85rem;
-    }
-    .btn-submit {
         font-size: 1rem;
     }
-    .booking-detail {
-        padding: 1rem;
-    }
-    .booking-detail h2 {
-        font-size: 1.2rem;
-    }
-    .booking-detail p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Medium devices (max-width: 768px) */
-@media (max-width: 768px) {
-    body {
-        font-size: 1rem;
-    }
-    .brand {
-        font-size: 1.3rem;
-    }
     .masthead {
-        height: 25vh;
+        height: 15vh;
     }
     .hero-text {
-        font-size: 20px;
+        font-size: 16px;
     }
     .booking-title {
-        font-size: 1.8rem;
-    }
-    .btn-submit {
-        font-size: 1.1rem;
-    }
-    .booking-detail {
-        padding: 1.5rem;
-    }
-    .booking-detail h2 {
-        font-size: 1.3rem;
-    }
-    .booking-detail p {
-        font-size: 0.95rem;
-    }
-}
-
-/* Large devices (max-width: 1024px) */
-@media (max-width: 1024px) {
-    body {
-        font-size: 1.1rem;
-    }
-    .brand {
-        font-size: 1.35rem;
-    }
-    .masthead {
-        height: 28vh;
-    }
-    .hero-text {
-        font-size: 22px;
-    }
-    .booking-detail {
-        padding: 1.75rem;
-    }
-    .booking-detail h2 {
         font-size: 1.4rem;
     }
+    .booking-instruction {
+        font-size: 0.75rem;
+    }
+    .btn-submit {
+        font-size: 0.9rem;
+    }
+    .booking-detail {
+        padding: 0.8rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.1rem;
+    }
     .booking-detail p {
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Medium-large devices (max-width: 992px) */
+@media (max-width: 992px) {
+    body {
+        font-size: 1.05rem;
+    }
+    .brand {
+        font-size: 1.32rem;
+    }
+    .masthead {
+        height: 26vh;
+    }
+    .hero-text {
+        font-size: 21px;
+    }
+    .booking-title {
+        font-size: 1.85rem;
+    }
+    .btn-submit {
+        font-size: 1.05rem;
+    }
+    .booking-detail {
+        padding: 1.65rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.35rem;
+    }
+    .booking-detail p {
+        font-size: 0.98rem;
+    }
+}
+
+/* Extra-large devices (min-width: 1200px) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.2rem;
+    }
+    .brand {
+        font-size: 1.5rem;
+    }
+    .masthead {
+        height: 35vh;
+    }
+    .hero-text {
+        font-size: 26px;
+    }
+    .booking-title {
+        font-size: 2.2rem;
+    }
+    .btn-submit {
+        font-size: 1.3rem;
+    }
+    .booking-detail {
+        padding: 2.5rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.6rem;
+    }
+    .booking-detail p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ultra-large screens (min-width: 1600px) */
+@media (min-width: 1600px) {
+    body {
+        font-size: 1.3rem;
+    }
+    .brand {
+        font-size: 1.6rem;
+    }
+    .masthead {
+        height: 40vh;
+    }
+    .hero-text {
+        font-size: 30px;
+    }
+    .booking-title {
+        font-size: 2.4rem;
+    }
+    .btn-submit {
+        font-size: 1.4rem;
+    }
+    .booking-detail {
+        padding: 3rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.8rem;
+    }
+    .booking-detail p {
+        font-size: 1.3rem;
     }
 }
