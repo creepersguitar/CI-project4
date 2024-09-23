@@ -35,13 +35,14 @@ signup styling is not loading and after you click submit, it just shows with "{"
 This section details the resubmission requirements and what i have done to fufil these.
 **1.1** this is saying add more UX design requirements.
     - Bite bait asked me to keep the UX simplistic as that is what their restaurants are.
-
+**1.2** This is saying to make bite bait more responsive
+    - I have made bite bait more responsive
 **1.3** This is saying to store and manipulate data
     - This is possible but i have to split my time between this project and another project due 10 days after resubmission on 13/10/2024
-
+**1.8** This is saying to add more custom logic
+    - Added some potential custom logic within the testing
 **1.13** This is saying to add the design process into the readme file
     - added into readme file
-
 **2.2 and 2.3** This is saying to finish the CRUD development
     - finished Delete of CRUD
     - Finished update of CRUD
@@ -52,6 +53,8 @@ This section details the resubmission requirements and what i have done to fufil
 **4** Testing
     - Add more tests such as manual testing browser testing etc
     - Added different tests for different html files
+**6.2** This is saying to fix any and all broken links
+    -   Found out where links are and fixed them
 **6.3** This is saying to expand deployment part of readme
     - Expanded deployment part of readme file
 
