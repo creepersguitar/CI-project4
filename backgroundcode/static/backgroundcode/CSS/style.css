@@ -544,7 +544,11 @@ input[type="password"]:focus {
 }
 
 /* Media Queries */
-
+@media (min-width: 280) {
+    .main-bg {
+        padding-top: 20em;
+    }
+}
 /* Very small devices (max-width: 480px) */
 @media (max-width: 480px) {
     body {
