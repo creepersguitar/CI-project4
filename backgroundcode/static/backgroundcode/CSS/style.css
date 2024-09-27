@@ -544,9 +544,39 @@ input[type="password"]:focus {
 }
 
 /* Media Queries */
-@media (min-width: 280) {
+@media (min-width: 280px) {
     .main-bg {
         padding-top: 20em;
+    }
+    body {
+        font-size: 0.8rem;
+    }
+    .brand {
+        font-size: 1rem;
+    }
+    .masthead {
+        height: 15vh;
+    }
+    .hero-text {
+        font-size: 16px;
+    }
+    .booking-title {
+        font-size: 1.4rem;
+    }
+    .booking-instruction {
+        font-size: 0.75rem;
+    }
+    .btn-submit {
+        font-size: 0.9rem;
+    }
+    .booking-detail {
+        padding: 0.8rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.1rem;
+    }
+    .booking-detail p {
+        font-size: 0.8rem;
     }
 }
 /* Very small devices (max-width: 480px) */
