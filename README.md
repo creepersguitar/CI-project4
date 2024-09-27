@@ -181,6 +181,18 @@ CSS testing passed first time with no errors given
 ### Manual Testing
 - checked for login to work (Before 14/07/2024 CI database error)
 - Checked for site to load (Before 14/07/2024 CI database error)
+**The table below is taken from a peer called MariaHochstoeger.**
+(Table Taken from MariaHochstoeger. The results are my own.)
+| Feature | Expect | Action | Result |
+| :.....: | :....: | :....: | :....: |
+| user signup | the user can sign up | user signs up | user can sign up with no issue |
+| user login | the user can login | user logs in | user can login with no issue |
+| make booking | the user can make a booking | user makes booking | user can make a booking with no issue |
+| view booking | the user can view a booking | user views booking | user can view their booking no issue |
+| update booking | the user can update a booking | user updates booking | user can update their booking |
+| Delete booking | user can delete their booking | user deletes booking | user can delete their booking |
+| go to home | user can go back to home page | user goes to home page | user can go to the home page |
+| user can click on the social media links | user can go onto the social links | user goes to social media | user can go to the social media for bite bait |
 ### Automated Testing
 The test cases are all based from the 'I think therefore i blog' module on the CI LMS (learning management system)
 The 3 tests that are ran came back with originally 2 errors... then it went to 3 then back to 2 but currently as of 17:35 on 17/07/2024, it is down to 1 error.
