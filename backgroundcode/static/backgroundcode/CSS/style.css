@@ -581,7 +581,12 @@ input[type="password"]:focus {
     .modal-footer {
         padding-top: 23em;
     }
-
+    .sign-up {
+        padding-right: 10em;
+    }
+    .sign-in-para {
+        padding-right: 10em;
+    }
 }
 /* Very small devices (max-width: 480px) */
 @media (max-width: 480px) {
