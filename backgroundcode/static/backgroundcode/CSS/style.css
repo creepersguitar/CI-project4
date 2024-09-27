@@ -578,6 +578,9 @@ input[type="password"]:focus {
     .booking-detail p {
         font-size: 0.8rem;
     }
+    .modal-footer {
+        padding-bottom: 23em;
+    }
 }
 /* Very small devices (max-width: 480px) */
 @media (max-width: 480px) {
