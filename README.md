@@ -39,6 +39,7 @@ This section details the resubmission requirements and what i have done to fufil
     - I have made bite bait more responsive
 **1.3** This is saying to store and manipulate data
     - This is possible but i have to split my time between this project and another project due 10 days after resubmission on 13/10/2024
+    - I haven't had enough time to be able to store and manipulate data as i have been splitting my time between this project, my final project, work and for my mental health.
 **1.8** This is saying to add more custom logic
     - Added some potential custom logic within the testing
 **1.13** This is saying to add the design process into the readme file
