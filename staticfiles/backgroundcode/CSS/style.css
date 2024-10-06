@@ -15,7 +15,99 @@ body {
     font-weight: 700;
     color: #4A4A4F;
 }
+/* signout code */
+h3 {
+    font-weight: 600;
+    color: #343a40; /* Darker text for the heading */
+}
 
+p.lead {
+    font-size: 1.1rem;
+    color: #6c757d; /* Muted gray for lead text */
+}
+
+/* Centering content */
+.container {
+    margin-top: 80px; /* Adds space from the top */
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+/* Customizing the Sign Out button */
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Modal customizations */
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    color: #495057;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.close {
+    color: #6c757d;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Adjusting the modal button placement */
+.modal-footer .btn {
+    margin-left: 10px;
+}
+
+/* rest of program */
 .red-o {
     color: #E84610;
 }
@@ -104,7 +196,8 @@ body {
     border-radius: 8px;
 }
 
-.main-table th, .main-table td {
+.main-table th,
+.main-table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -162,7 +255,7 @@ p {
     margin-left: 5%;
     color: lightgray;
 }
-/* View booking button styles */
+
 .btn {
     padding: 10px 15px;
     font-size: 16px;
@@ -170,14 +263,17 @@ p {
     cursor: pointer;
     margin: 5px;
 }
+
 .btn-update {
     background-color: #4CAF50; /* Green */
     color: white;
 }
+
 .btn-home {
     background-color: #2196F3; /* Blue */
     color: white;
 }
+
 .button-container {
     text-align: center;
     margin-top: 20px;
@@ -232,7 +328,6 @@ p {
     color: rgb(222, 146, 168);
 }
 
-/* Custom CSS for logo and hero text box */
 .logo-box {
     position: relative;
     text-align: center;
@@ -276,6 +371,7 @@ p {
     color: #188181;
     margin-bottom: 20px;
 }
+
 .container {
     max-width: 600px;
     margin: 20px auto;
@@ -284,21 +380,26 @@ p {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .status-label {
     padding: 5px 10px;
     border-radius: 4px;
     font-weight: bold;
     color: #fff;
 }
+
 .status-label.confirmed {
     background-color: #188181;
 }
+
 .status-label.pending {
     background-color: #f0ad4e;
 }
+
 .status-label.cancelled {
     background-color: #e84610;
 }
+
 .booking-instruction {
     text-align: center;
     color: #999;
@@ -312,7 +413,10 @@ p {
     gap: 15px;
 }
 
-input[type="text"], input[type="date"], input[type="email"], input[type="password"] {
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -321,7 +425,10 @@ input[type="text"], input[type="date"], input[type="email"], input[type="passwor
     transition: all 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
     border-color: #188181;
     box-shadow: 0 0 5px rgba(24, 129, 129, 0.3);
     outline: none;
@@ -343,7 +450,6 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, i
     background-color: #23BBBB;
 }
 
-/* Booking detail styles */
 .main-content {
     display: flex;
     align-items: center;
@@ -376,7 +482,6 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, i
     font-weight: bold;
 }
 
-/* Signup Form Styles */
 .signup h1 {
     font-family: 'Lato', sans-serif;
     font-size: 1.8rem;
@@ -411,7 +516,9 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, i
     margin: 0 auto;
 }
 
-.signup input[type="text"], .signup input[type="password"], .signup input[type="email"] {
+.signup input[type="text"],
+.signup input[type="password"],
+.signup input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -437,93 +544,173 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, i
 }
 
 /* Media Queries */
-
-/* Small devices (max-width: 600px) */
-@media (max-width: 600px) {
+@media (min-width: 280px) {
+    .main-bg {
+        padding-bottom: 20em;
+    }
     body {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     .brand {
-        font-size: 1.2rem;
-    }
-    .masthead {
-        height: 20vh;
-    }
-    .hero-text {
-        font-size: 18px;
-    }
-    .booking-title {
-        font-size: 1.6rem;
-    }
-    .booking-instruction {
-        font-size: 0.85rem;
-    }
-    .btn-submit {
         font-size: 1rem;
     }
-    .booking-detail {
-        padding: 1rem;
-    }
-    .booking-detail h2 {
-        font-size: 1.2rem;
-    }
-    .booking-detail p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Medium devices (max-width: 768px) */
-@media (max-width: 768px) {
-    body {
-        font-size: 1rem;
-    }
-    .brand {
-        font-size: 1.3rem;
-    }
     .masthead {
-        height: 25vh;
+        height: 15vh;
     }
     .hero-text {
-        font-size: 20px;
+        font-size: 16px;
     }
     .booking-title {
-        font-size: 1.8rem;
-    }
-    .btn-submit {
-        font-size: 1.1rem;
-    }
-    .booking-detail {
-        padding: 1.5rem;
-    }
-    .booking-detail h2 {
-        font-size: 1.3rem;
-    }
-    .booking-detail p {
-        font-size: 0.95rem;
-    }
-}
-
-/* Large devices (max-width: 1024px) */
-@media (max-width: 1024px) {
-    body {
-        font-size: 1.1rem;
-    }
-    .brand {
-        font-size: 1.35rem;
-    }
-    .masthead {
-        height: 28vh;
-    }
-    .hero-text {
-        font-size: 22px;
-    }
-    .booking-detail {
-        padding: 1.75rem;
-    }
-    .booking-detail h2 {
         font-size: 1.4rem;
     }
+    .booking-instruction {
+        font-size: 0.75rem;
+    }
+    .btn-submit {
+        font-size: 0.9rem;
+    }
+    .booking-detail {
+        padding: 0.8rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.1rem;
+    }
     .booking-detail p {
+        font-size: 0.8rem;
+    }
+    .modal-footer {
+        padding-top: 23em;
+    }
+    .sign-up {
+        padding-right: 10em;
+    }
+    .sign-in-para {
+        padding-right: 10em;
+    }
+}
+/* Very small devices (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.8rem;
+    }
+    .brand {
         font-size: 1rem;
+    }
+    .masthead {
+        height: 15vh;
+    }
+    .hero-text {
+        font-size: 16px;
+    }
+    .booking-title {
+        font-size: 1.4rem;
+    }
+    .booking-instruction {
+        font-size: 0.75rem;
+    }
+    .btn-submit {
+        font-size: 0.9rem;
+    }
+    .booking-detail {
+        padding: 0.8rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.1rem;
+    }
+    .booking-detail p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Medium-large devices (max-width: 992px) */
+@media (max-width: 992px) {
+    body {
+        font-size: 1.05rem;
+    }
+    .brand {
+        font-size: 1.32rem;
+    }
+    .masthead {
+        height: 26vh;
+    }
+    .hero-text {
+        font-size: 21px;
+    }
+    .booking-title {
+        font-size: 1.85rem;
+    }
+    .btn-submit {
+        font-size: 1.05rem;
+    }
+    .booking-detail {
+        padding: 1.65rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.35rem;
+    }
+    .booking-detail p {
+        font-size: 0.98rem;
+    }
+}
+
+/* Extra-large devices (min-width: 1200px) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.2rem;
+    }
+    .brand {
+        font-size: 1.5rem;
+    }
+    .masthead {
+        height: 35vh;
+    }
+    .hero-text {
+        font-size: 26px;
+    }
+    .booking-title {
+        font-size: 2.2rem;
+    }
+    .btn-submit {
+        font-size: 1.3rem;
+    }
+    .booking-detail {
+        padding: 2.5rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.6rem;
+    }
+    .booking-detail p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ultra-large screens (min-width: 1600px) */
+@media (min-width: 1600px) {
+    body {
+        font-size: 1.3rem;
+    }
+    .brand {
+        font-size: 1.6rem;
+    }
+    .masthead {
+        height: 40vh;
+    }
+    .hero-text {
+        font-size: 30px;
+    }
+    .booking-title {
+        font-size: 2.4rem;
+    }
+    .btn-submit {
+        font-size: 1.4rem;
+    }
+    .booking-detail {
+        padding: 3rem;
+    }
+    .booking-detail h2 {
+        font-size: 1.8rem;
+    }
+    .booking-detail p {
+        font-size: 1.3rem;
     }
 }
