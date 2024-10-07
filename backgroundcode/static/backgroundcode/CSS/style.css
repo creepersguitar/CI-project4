@@ -545,9 +545,6 @@ input[type="password"]:focus {
 
 /* Media Queries */
 @media (min-width: 280px) {
-    .main-bg {
-        padding-bottom: 20em;
-    }
     body {
         font-size: 0.8rem;
     }
