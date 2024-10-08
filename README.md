@@ -50,6 +50,7 @@ This section details the resubmission requirements and what i have done to fufil
 **3.1** Fix all bugs
     - Fixed bug which does not make a page styled
     - fixed bugs which causes broken links
+    - only bug i have is that i have no signout.html file yet there is a signout.html file being loaded onto the application.
 **3.3** Refer to the 2.2 and 2.3
 **4** Testing
     - Add more tests such as manual testing browser testing etc

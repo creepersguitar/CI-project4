@@ -685,7 +685,7 @@ input[type="password"]:focus {
 }
 
 /* Ultra-large screens (min-width: 1600px) */
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
     body {
         font-size: 1.3rem;
     }
@@ -712,5 +712,8 @@ input[type="password"]:focus {
     }
     .booking-detail p {
         font-size: 1.3rem;
+    }
+    .sign-in-para {
+        padding-top: 12em;
     }
 }
