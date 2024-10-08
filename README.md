@@ -50,7 +50,7 @@ This section details the resubmission requirements and what i have done to fufil
 **3.1** Fix all bugs
     - Fixed bug which does not make a page styled
     - fixed bugs which causes broken links
-    - only bug i have is that i have no signout.html file yet there is a signout.html file being loaded onto the application.
+    - Fixed the bug which caused the logout.html to load when there was no logout.html file in bite bait.
 **3.3** Refer to the 2.2 and 2.3
 **4** Testing
     - Add more tests such as manual testing browser testing etc
@@ -359,6 +359,7 @@ To explain the image.
  - John from the code institute Tutor team for helping me solve an issue with error 500.
  - Other coworkers/ residents where i work at supporting me in getting this project done
  - The Code Institute 'i think therefore i blog' module on the 5 project course to be able to get the structure of the application and the create user stories section of the readme file.
+ - **The amazing beth cottell for always supporting me and helping me through this project when times were tough and when i couldn't see the issue i needed to solve.**
 ## Contributing
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:
  - when i say feature i mean what you are calling your branch (step 2), and what you are commiting aswell as pushing (steps 4 and 5)
