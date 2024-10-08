@@ -714,6 +714,16 @@ input[type="password"]:focus {
         font-size: 1.3rem;
     }
     .sign-in-para {
-        padding-top: 12em;
+        padding-bottom: 40rem;
+        padding-left: 12em;
+    }
+    .signup-form {
+        padding-right: 21rem;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
     }
 }
