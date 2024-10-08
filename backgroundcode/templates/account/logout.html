@@ -1,35 +1,20 @@
-<html><head></head>
+<html>
+  <head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Sign Out</title>
-    
   </head>
-  <body>
-    <div>
-      <strong>Menu:</strong>
-      <ul>
-        
-        <li><a href="/accounts/email/">Change Email</a></li>
-        <li><a href="/accounts/logout/">Sign Out</a></li>
-        
-      </ul>
+  
+  <body class="container mt-5">
+    <div class="card p-3">
+      <h1 class="text-center">Sign Out</h1>
+      <p>Are you sure you want to sign out?</p>
+      <form method="post" id="logout-form" action="/accounts/logout/">
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+        <button type="submit" class="btn btn-danger btn-block">Sign Out</button>
+      </form>
     </div>
-    
-<h1>Sign Out</h1>
-
-<p>Are you sure you want to sign out?</p>
-
-<form method="post" id="logout-form" action="/accounts/logout/">
-  <input type="hidden" name="csrfmiddlewaretoken" value="IZe3F9RgFkfxScVtU4pi86zVJjsU7MLvKvWH8NK7OdHjVutXXvJz8A9W68trAqp0">
-  
-  <button type="submit">Sign Out</button>
-</form>
-
-
-
-    
-    
-    
-  
-
-</body></html>
+  </body>
+</html>
