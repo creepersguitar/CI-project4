@@ -3,7 +3,9 @@
     --secondary-color: #E84610;
     --text-color: #445261;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #F9FAFC;
     font-family: 'Lato', sans-serif;
@@ -35,7 +37,10 @@ p.lead {
     font-size: 1rem;
     padding: 10px 20px;
 }
-
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 /* Customizing the Sign Out button */
 .btn-danger {
     background-color: #dc3545;
@@ -135,8 +140,15 @@ p.lead {
 
 .image-container {
     position: relative;
+    animation: fadeIn 1s ease-in;
 }
-
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 .image-flash {
     position: absolute;
     bottom: 5%;
