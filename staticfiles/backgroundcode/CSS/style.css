@@ -18,7 +18,11 @@ body {
 body, html {
     min-height: 100vh;
 }
-
+main {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
 footer {
     position: absolute;
     bottom: 0;
