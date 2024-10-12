@@ -746,9 +746,3 @@ input[type="password"]:focus {
         font-size: 1.3rem;
     }
 }
-@media (min-width: 1920px) {
-    footer {
-        bottom: 0;
-        width: 100%;
-    }
-}
